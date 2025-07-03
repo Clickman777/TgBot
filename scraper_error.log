@@ -1,0 +1,5167 @@
+Fetching ranked list from novelfire.net/ranking...
+Could not find the ranking list element ('ul.rank-list'). Dumping HTML for debugging.
+================ HTML DUMP ================
+<!DOCTYPE html>
+<html bgcolor="black" hgcolor="purple" lang="en" theme="dark">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Novel Ranking - Novel Fire
+  </title>
+  <meta content="The ranking is based on the combination of increasing reads of a book and the average user rating score." name="description"/>
+  <meta content="Copyright © Novel Fire" name="copyright"/>
+  <meta content="Novel Fire" name="author"/>
+  <meta content="index,follow" name="robots"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <meta content="Novel Fire" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="http://novelfire.net/ranking" property="og:url"/>
+  <meta content="Novel Ranking - Novel Fire" property="og:title"/>
+  <meta content="The ranking is based on the combination of increasing reads of a book and the average user rating score." property="og:description"/>
+  <meta content="https://novelfire.net/bg-logo.jpg?v=2" property="og:image"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="http://novelfire.net/ranking" name="twitter:url"/>
+  <meta content="Novel Ranking - Novel Fire" name="twitter:title"/>
+  <meta content="The ranking is based on the combination of increasing reads of a book and the average user rating score." name="twitter:description"/>
+  <meta content="https://novelfire.net/bg-logo.jpg?v=2" name="twitter:image"/>
+  <meta content="Novel Fire" name="twitter:creator"/>
+  <meta content="GicVadLK8LYTAfkmSqVgDc70bwrmoOxOMnTAkpm1" name="csrf-token"/>
+  <link href="https://novelfire.net/ranking" rel="canonical"/>
+  <link href="https://novelfire.net/logo.ico?v=2" rel="shortcut icon"/>
+  <link href="https://novelfire.net/apple-touch-icon.png?v=2" rel="apple-touch-icon"/>
+  <link crossorigin="" href="//fonts.gstatic.com" rel="preconnect"/>
+  <link crossorigin="" href="//fonts.googleapis.com" rel="preconnect"/>
+  <link as="style" crossorigin="" href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700|Nunito+Sans:400,500,600,700&amp;display=swap" onload="this.rel='stylesheet'" rel="preload stylesheet"/>
+  <noscript>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700|Nunito+Sans:400,500,600,700&amp;display=swap" rel="stylesheet"/>
+  </noscript>
+  <script type="application/ld+json">
+   { "@context":"https://schema.org/","@type" : "Organization", "name":"Novel Fire", "url":"https://novelfire.net", "slogan": "Novel Fire - Read Web Novels Online Free", "logo": "https://novelfire.net/logo.svg" }
+  </script>
+  <script type="application/ld+json">
+   { "@context":"https://schema.org/","@type" :"BreadcrumbList",
+       "itemListElement":[[{"@type":"ListItem","position":1,"name":"Novel","item":"https://novelfire.net/home"}],
+                         [{"@type":"ListItem","position":2,"name":"Novel Ranking","item":"https://novelfire.net/ranking"}]] }
+  </script>
+  <link href="https://novelfire.net/frontend/css/navbar.min.css?ver=1.1.71" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/media-mobile.min.css?ver=1.1.71" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/media-768.min.css?ver=1.1.71" media="screen and (min-width: 768px)" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/media-1024.min.css?ver=1.1.71" media="screen and (min-width: 1024px)" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/media-1270.min.css?ver=1.1.71" media="screen and (min-width: 1270px)" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/fontello.css?ver=1.1.71" rel="stylesheet" type="text/css"/>
+  <link href="https://novelfire.net/frontend/css/ranking.min.css?ver=1.1.71" rel="stylesheet" type="text/css">
+   <style>
+    .rating span{display:inline-block}.rating span.num{position: relative;top: -2px}.rank-novels .novel-item a{display:initial}
+   </style>
+   <link href="https://novelfire.net/frontend/css/style.min.css?ver=1.1.71" media="all" rel="stylesheet" type="text/css"/>
+  </link>
+ </head>
+ <body class="fade-out">
+  <header class="main-header skiptranslate">
+   <div class="wrapper">
+    <div class="nav-logo">
+     <a href="https://novelfire.net/home" title="Novel Fire - Read Web Novels Online Free">
+      <img alt="Novel Fire" src="https://novelfire.net/logo.svg?v=2"/>
+     </a>
+    </div>
+    <div class="navigation-bar">
+     <nav>
+      <span class="lnw-slog fs-14">
+       Your fictional stories hub.
+      </span>
+      <ul class="navbar-menu">
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/search" title="Search Novels">
+         <i class="icon-search">
+         </i>
+         Search
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/genre-all/sort-new/status-all/all-novel" title="Explore The Recently Added Novels">
+         <i class="icon-th-large">
+         </i>
+         Browse
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/ranking" title="Novel Ranking">
+         <i class="icon-diamond">
+         </i>
+         Ranking
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/latest-release-novels" title="Check out the recently added novel chapters">
+         <i class="icon-book-open">
+         </i>
+         Updates
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/user/member-list" title="Member List">
+         <i>
+          <svg fill="currentColor" height="20" viewbox="0 0 640 512" width="16" xmlns="http://www.w3.org/2000/svg">
+           <path d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z">
+           </path>
+          </svg>
+         </i>
+         Members
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/search-adv" title="Search Novels with Advanced Filtering Function">
+         <i class="icon-filter">
+         </i>
+         Filter
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://novelfire.net/notices" title="Development Announcements">
+         <i class="icon-megaphone">
+         </i>
+         <span>
+          DEV
+         </span>
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nightmode_switch" data-content="Light Theme" data-night="0" data-tool="night" title="Dark Mode">
+         <i class="icon-sun">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="login-wrap-nav">
+      <a class="nav-link login button" data-close-menu-mobile="1" href="#modal">
+       Login
+      </a>
+     </div>
+    </div>
+    <div class="nav-back">
+    </div>
+    <button id="mobile-menu-btn">
+     <div id="burger-btn">
+     </div>
+    </button>
+    <span class="nav notify-bell mobile-block icon-bell-alt">
+    </span>
+   </div>
+  </header>
+  <div class="sidebar-wrapper">
+  </div>
+  <main role="main">
+   <div class="navbar-breadcrumb">
+    <div class="breadcrumb show-dots container">
+     <a href="https://novelfire.net/home" title="Novel Fire - Read Web Novels Online Free">
+      <svg class="svg-home" height="20" viewbox="0 0 24 24" width="20">
+       <path d="M0 0h24v24H0z" fill="none">
+       </path>
+       <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z">
+       </path>
+      </svg>
+      Novel
+     </a>
+     <svg fill="currentColor" height="10" viewbox="0 0 16 16" width="10">
+      <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" fill-rule="evenodd">
+      </path>
+     </svg>
+     <a href="https://novelfire.net/ranking" title="Novel Ranking">
+      Novel Ranking
+     </a>
+    </div>
+   </div>
+   <article id="ranking">
+    <div class="container">
+     <header>
+      <div class="rank-list">
+       <ul>
+        <li class="selected">
+         <a href="https://novelfire.net/ranking" title="Novel Ranking">
+          <span>
+           Rank
+          </span>
+          <small>
+           Overal ranking
+          </small>
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/ranking/ratings" title="Top Rated Novels">
+          <span>
+           Rating
+          </span>
+          <small>
+           Users' votes
+          </small>
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/ranking/most-read" title="Most Read Novels">
+          <span>
+           Reads
+          </span>
+          <small>
+           Chapter visits
+          </small>
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/ranking/most-review" title="Most Reviewed Novels">
+          <span>
+           Reviews
+          </span>
+          <small>
+           User opinions
+          </small>
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/ranking/most-comment" title="Most Commented Novels">
+          <span>
+           Comments
+          </span>
+          <small>
+           Discussion
+          </small>
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/ranking/most-lib" title="Novels in the most user libraries">
+          <span>
+           Collections
+          </span>
+          <small>
+           In library
+          </small>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="rank-info">
+       <h1>
+        Novel Ranking
+       </h1>
+       <p>
+        The ranking is based on the combination of increasing reads of a book and the average user rating score.
+       </p>
+      </div>
+     </header>
+     <div class="rank-body">
+      <ul class="rank-novels">
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/shadow-slave" title="Shadow Slave">
+           <img alt="Shadow Slave" class="lazy" data-src="https://novelfire.net/server-1/shadow-slave.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/shadow-slave" title="Shadow Slave">
+           Shadow Slave
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2196">
+          </i>
+          <div class="scroll" id="categories_2196" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2196">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/reverend-insanity" title="Reverend Insanity">
+           <img alt="Reverend Insanity" class="lazy" data-src="https://novelfire.net/server-1/reverend-insanity.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/reverend-insanity" title="Reverend Insanity">
+           Reverend Insanity
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1074">
+          </i>
+          <div class="scroll" id="categories_1074" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Tragedy
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1074">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/lord-of-the-mysteries" title="Lord of the Mysteries">
+           <img alt="Lord of the Mysteries" class="lazy" data-src="https://novelfire.net/server-1/lord-of-the-mysteries.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/lord-of-the-mysteries" title="Lord of the Mysteries">
+           Lord of the Mysteries
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_229">
+          </i>
+          <div class="scroll" id="categories_229" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Shounen
+           </span>
+           <span>
+            Supernatural
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_229">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/path-of-the-extra" title="Path of the Extra">
+           <img alt="Path of the Extra" class="lazy" data-src="https://novelfire.net/server-1/path-of-the-extra.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/path-of-the-extra" title="Path of the Extra">
+           Path of the Extra
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7832">
+          </i>
+          <div class="scroll" id="categories_7832" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            School Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7832">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/young-masters-pov-woke-up-as-a-villain-in-a-game-one-day" title="Young Master's PoV: Woke Up As A Villain In A Game One Day">
+           <img alt="Young Master's PoV: Woke Up As A Villain In A Game One Day" class="lazy" data-src="https://novelfire.net/server-1/young-masters-pov-woke-up-as-a-villain-in-a-game-one-day.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/young-masters-pov-woke-up-as-a-villain-in-a-game-one-day" title="Young Master's PoV: Woke Up As A Villain In A Game One Day">
+           Young Master's PoV: Woke Up As A Villain In A Game One Day
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_8890">
+          </i>
+          <div class="scroll" id="categories_8890" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_8890">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/a-regressors-tale-of-cultivation" title="A Regressor’s Tale of Cultivation">
+           <img alt="A Regressor’s Tale of Cultivation" class="lazy" data-src="https://novelfire.net/server-1/a-regressors-tale-of-cultivation.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/a-regressors-tale-of-cultivation" title="A Regressor’s Tale of Cultivation">
+           A Regressor’s Tale of Cultivation
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5610">
+          </i>
+          <div class="scroll" id="categories_5610" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5610">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/omniscient-readers-viewpoint" title="Omniscient Reader's Viewpoint">
+           <img alt="Omniscient Reader's Viewpoint" class="lazy" data-src="https://novelfire.net/server-1/omniscient-readers-viewpoint.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/omniscient-readers-viewpoint" title="Omniscient Reader's Viewpoint">
+           Omniscient Reader's Viewpoint
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4046">
+          </i>
+          <div class="scroll" id="categories_4046" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Psychological
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4046">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-perfect-run" title="The Perfect Run">
+           <img alt="The Perfect Run" class="lazy" data-src="https://novelfire.net/server-1/the-perfect-run.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-perfect-run" title="The Perfect Run">
+           The Perfect Run
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4951">
+          </i>
+          <div class="scroll" id="categories_4951" scrollpanel="">
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4951">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/invisible-dragon" title="Invisible Dragon">
+           <img alt="Invisible Dragon" class="lazy" data-src="https://novelfire.net/server-1/invisible-dragon.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/invisible-dragon" title="Invisible Dragon">
+           Invisible Dragon
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5539">
+          </i>
+          <div class="scroll" id="categories_5539" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Supernatural
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5539">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/kill-the-sun" title="Kill the Sun">
+           <img alt="Kill the Sun" class="lazy" data-src="https://novelfire.net/server-1/kill-the-sun.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/kill-the-sun" title="Kill the Sun">
+           Kill the Sun
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5085">
+          </i>
+          <div class="scroll" id="categories_5085" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5085">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/seoul-object-story" title="Seoul Object Story">
+           <img alt="Seoul Object Story" class="lazy" data-src="https://novelfire.net/server-1/seoul-object-story.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/seoul-object-story" title="Seoul Object Story">
+           Seoul Object Story
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6856">
+          </i>
+          <div class="scroll" id="categories_6856" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Gender Bender
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Slice of Life
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6856">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/mother-of-learning" title="Mother of Learning">
+           <img alt="Mother of Learning" class="lazy" data-src="https://novelfire.net/server-1/mother-of-learning.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/mother-of-learning" title="Mother of Learning">
+           Mother of Learning
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3152">
+          </i>
+          <div class="scroll" id="categories_3152" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Supernatural
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3152">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/advent-of-the-three-calamities" title="Advent of the Three Calamities">
+           <img alt="Advent of the Three Calamities" class="lazy" data-src="https://novelfire.net/server-1/advent-of-the-three-calamities.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/advent-of-the-three-calamities" title="Advent of the Three Calamities">
+           Advent of the Three Calamities
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5429">
+          </i>
+          <div class="scroll" id="categories_5429" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Slice of Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5429">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-authors-pov" title="The Author's POV">
+           <img alt="The Author's POV" class="lazy" data-src="https://novelfire.net/server-1/the-authors-pov.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-authors-pov" title="The Author's POV">
+           The Author's POV
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2314">
+          </i>
+          <div class="scroll" id="categories_2314" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2314">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-villains-pov" title="THE VILLAIN'S POV">
+           <img alt="THE VILLAIN'S POV" class="lazy" data-src="https://novelfire.net/server-1/the-villains-pov.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-villains-pov" title="THE VILLAIN'S POV">
+           THE VILLAIN'S POV
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9861">
+          </i>
+          <div class="scroll" id="categories_9861" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9861">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-legendary-mechanic" title="The Legendary Mechanic">
+           <img alt="The Legendary Mechanic" class="lazy" data-src="https://novelfire.net/server-1/the-legendary-mechanic.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-legendary-mechanic" title="The Legendary Mechanic">
+           The Legendary Mechanic
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1111">
+          </i>
+          <div class="scroll" id="categories_1111" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Mecha
+           </span>
+           <span>
+            Sci-fi
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1111">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-beginning-after-the-end" title="The Beginning After The End">
+           <img alt="The Beginning After The End" class="lazy" data-src="https://novelfire.net/server-1/the-beginning-after-the-end.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-beginning-after-the-end" title="The Beginning After The End">
+           The Beginning After The End
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2377">
+          </i>
+          <div class="scroll" id="categories_2377" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2377">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/shattered-innocence-transmigrated-into-a-novel-as-an-extra" title="Shattered Innocence: Transmigrated Into a Novel as an Extra">
+           <img alt="Shattered Innocence: Transmigrated Into a Novel as an Extra" class="lazy" data-src="https://novelfire.net/server-1/shattered-innocence-transmigrated-into-a-novel-as-an-extra.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/shattered-innocence-transmigrated-into-a-novel-as-an-extra" title="Shattered Innocence: Transmigrated Into a Novel as an Extra">
+           Shattered Innocence: Transmigrated Into a Novel as an Extra
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7838">
+          </i>
+          <div class="scroll" id="categories_7838" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7838">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/extras-death-i-am-the-son-of-hades" title="Extra's Death: I Am the Son of Hades">
+           <img alt="Extra's Death: I Am the Son of Hades" class="lazy" data-src="https://novelfire.net/server-1/extras-death-i-am-the-son-of-hades.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/extras-death-i-am-the-son-of-hades" title="Extra's Death: I Am the Son of Hades">
+           Extra's Death: I Am the Son of Hades
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7834">
+          </i>
+          <div class="scroll" id="categories_7834" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7834">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/horror-game-developer-my-games-arent-that-scary" title="Horror Game Developer: My games aren't that scary!">
+           <img alt="Horror Game Developer: My games aren't that scary!" class="lazy" data-src="https://novelfire.net/server-1/horror-game-developer-my-games-arent-that-scary.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/horror-game-developer-my-games-arent-that-scary" title="Horror Game Developer: My games aren't that scary!">
+           Horror Game Developer: My games aren't that scary!
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_10676">
+          </i>
+          <div class="scroll" id="categories_10676" scrollpanel="">
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Horror
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_10676">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/cultivation-online" title="Cultivation Online">
+           <img alt="Cultivation Online" class="lazy" data-src="https://novelfire.net/server-1/cultivation-online.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/cultivation-online" title="Cultivation Online">
+           Cultivation Online
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2481">
+          </i>
+          <div class="scroll" id="categories_2481" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Game
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2481">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/creating-heavenly-laws" title="Creating Heavenly Laws">
+           <img alt="Creating Heavenly Laws" class="lazy" data-src="https://novelfire.net/server-1/creating-heavenly-laws.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/creating-heavenly-laws" title="Creating Heavenly Laws">
+           Creating Heavenly Laws
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5552">
+          </i>
+          <div class="scroll" id="categories_5552" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Isekai
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Supernatural
+           </span>
+           <span>
+            Xianxia
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5552">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/my-house-of-horrors" title="My House of Horrors">
+           <img alt="My House of Horrors" class="lazy" data-src="https://novelfire.net/server-1/my-house-of-horrors.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/my-house-of-horrors" title="My House of Horrors">
+           My House of Horrors
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_215">
+          </i>
+          <div class="scroll" id="categories_215" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Horror
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_215">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/got-dropped-into-a-ghost-story-still-gotta-work" title="Got Dropped into a Ghost Story, Still Gotta Work">
+           <img alt="Got Dropped into a Ghost Story, Still Gotta Work" class="lazy" data-src="https://novelfire.net/server-1/got-dropped-into-a-ghost-story-still-gotta-work.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/got-dropped-into-a-ghost-story-still-gotta-work" title="Got Dropped into a Ghost Story, Still Gotta Work">
+           Got Dropped into a Ghost Story, Still Gotta Work
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_8479">
+          </i>
+          <div class="scroll" id="categories_8479" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Horror
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_8479">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/trash-of-the-counts-family" title="Trash of the Count's Family">
+           <img alt="Trash of the Count's Family" class="lazy" data-src="https://novelfire.net/server-1/trash-of-the-counts-family.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/trash-of-the-counts-family" title="Trash of the Count's Family">
+           Trash of the Count's Family
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_199">
+          </i>
+          <div class="scroll" id="categories_199" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_199">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-academys-weakest-became-a-demon-limited-hunter" title="The Academy’s Weakest Became A Demon-Limited Hunter">
+           <img alt="The Academy’s Weakest Became A Demon-Limited Hunter" class="lazy" data-src="https://novelfire.net/server-1/the-academys-weakest-became-a-demon-limited-hunter.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-academys-weakest-became-a-demon-limited-hunter" title="The Academy’s Weakest Became A Demon-Limited Hunter">
+           The Academy’s Weakest Became A Demon-Limited Hunter
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4987">
+          </i>
+          <div class="scroll" id="categories_4987" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            School Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4987">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/getting-a-technology-system-in-modern-day" title="Getting a Technology System in Modern Day">
+           <img alt="Getting a Technology System in Modern Day" class="lazy" data-src="https://novelfire.net/server-1/getting-a-technology-system-in-modern-day.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/getting-a-technology-system-in-modern-day" title="Getting a Technology System in Modern Day">
+           Getting a Technology System in Modern Day
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3638">
+          </i>
+          <div class="scroll" id="categories_3638" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adult
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Slice of Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3638">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/no-more-pain-for-this-villain" title="No More Pain For This Villain.">
+           <img alt="No More Pain For This Villain." class="lazy" data-src="https://novelfire.net/server-1/no-more-pain-for-this-villain.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/no-more-pain-for-this-villain" title="No More Pain For This Villain.">
+           No More Pain For This Villain.
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3864">
+          </i>
+          <div class="scroll" id="categories_3864" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3864">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/atticuss-odyssey-reincarnated-into-a-playground" title="Atticus's Odyssey: Reincarnated Into A Playground">
+           <img alt="Atticus's Odyssey: Reincarnated Into A Playground" class="lazy" data-src="https://novelfire.net/server-1/atticuss-odyssey-reincarnated-into-a-playground.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/atticuss-odyssey-reincarnated-into-a-playground" title="Atticus's Odyssey: Reincarnated Into A Playground">
+           Atticus's Odyssey: Reincarnated Into A Playground
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5163">
+          </i>
+          <div class="scroll" id="categories_5163" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Reincarnation
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5163">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/tree-of-aeons" title="Tree of Aeons">
+           <img alt="Tree of Aeons" class="lazy" data-src="https://novelfire.net/server-1/tree-of-aeons.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/tree-of-aeons" title="Tree of Aeons">
+           Tree of Aeons
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5480">
+          </i>
+          <div class="scroll" id="categories_5480" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Isekai
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5480">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/reincarnated-lord-i-can-upgrade-everything" title="Reincarnated Lord: I can upgrade everything!">
+           <img alt="Reincarnated Lord: I can upgrade everything!" class="lazy" data-src="https://novelfire.net/server-1/reincarnated-lord-i-can-upgrade-everything.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/reincarnated-lord-i-can-upgrade-everything" title="Reincarnated Lord: I can upgrade everything!">
+           Reincarnated Lord: I can upgrade everything!
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7761">
+          </i>
+          <div class="scroll" id="categories_7761" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Slice of Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7761">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-demon-prince-goes-to-the-academy" title="The Demon Prince goes to the Academy">
+           <img alt="The Demon Prince goes to the Academy" class="lazy" data-src="https://novelfire.net/server-1/the-demon-prince-goes-to-the-academy.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-demon-prince-goes-to-the-academy" title="The Demon Prince goes to the Academy">
+           The Demon Prince goes to the Academy
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3693">
+          </i>
+          <div class="scroll" id="categories_3693" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            School Life
+           </span>
+           <span>
+            Shounen
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3693">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-innkeeper" title="The Innkeeper">
+           <img alt="The Innkeeper" class="lazy" data-src="https://novelfire.net/server-1/the-innkeeper.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-innkeeper" title="The Innkeeper">
+           The Innkeeper
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2747">
+          </i>
+          <div class="scroll" id="categories_2747" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2747">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/supreme-magus" title="Supreme Magus">
+           <img alt="Supreme Magus" class="lazy" data-src="https://novelfire.net/server-1/supreme-magus.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/supreme-magus" title="Supreme Magus">
+           Supreme Magus
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1966">
+          </i>
+          <div class="scroll" id="categories_1966" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1966">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/my-three-wives-are-beautiful-vampires" title="My Three Wives Are Beautiful Vampires">
+           <img alt="My Three Wives Are Beautiful Vampires" class="lazy" data-src="https://novelfire.net/server-1/my-three-wives-are-beautiful-vampires.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/my-three-wives-are-beautiful-vampires" title="My Three Wives Are Beautiful Vampires">
+           My Three Wives Are Beautiful Vampires
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2328">
+          </i>
+          <div class="scroll" id="categories_2328" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2328">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/apocalypse-i-built-the-infinite-train" title="Apocalypse: I Built the Infinite Train">
+           <img alt="Apocalypse: I Built the Infinite Train" class="lazy" data-src="https://novelfire.net/server-1/apocalypse-i-built-the-infinite-train.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/apocalypse-i-built-the-infinite-train" title="Apocalypse: I Built the Infinite Train">
+           Apocalypse: I Built the Infinite Train
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_10001">
+          </i>
+          <div class="scroll" id="categories_10001" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Horror
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Shounen
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_10001">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/my-longevity-simulation" title="My Longevity Simulation">
+           <img alt="My Longevity Simulation" class="lazy" data-src="https://novelfire.net/server-1/my-longevity-simulation.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/my-longevity-simulation" title="My Longevity Simulation">
+           My Longevity Simulation
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5478">
+          </i>
+          <div class="scroll" id="categories_5478" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5478">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/sword-god-in-a-world-of-magic" title="Sword God in a World of Magic">
+           <img alt="Sword God in a World of Magic" class="lazy" data-src="https://novelfire.net/server-1/sword-god-in-a-world-of-magic.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/sword-god-in-a-world-of-magic" title="Sword God in a World of Magic">
+           Sword God in a World of Magic
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2674">
+          </i>
+          <div class="scroll" id="categories_2674" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Reincarnation
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2674">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/son-of-the-hero-king" title="SON OF THE HERO KING">
+           <img alt="SON OF THE HERO KING" class="lazy" data-src="https://novelfire.net/server-1/son-of-the-hero-king.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/son-of-the-hero-king" title="SON OF THE HERO KING">
+           SON OF THE HERO KING
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2843">
+          </i>
+          <div class="scroll" id="categories_2843" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adult
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Smut
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2843">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-primal-hunter" title="The Primal Hunter">
+           <img alt="The Primal Hunter" class="lazy" data-src="https://novelfire.net/server-1/the-primal-hunter.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-primal-hunter" title="The Primal Hunter">
+           The Primal Hunter
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3869">
+          </i>
+          <div class="scroll" id="categories_3869" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3869">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/top-tier-providence-secretly-cultivate-for-a-thousand-years" title="Top Tier Providence, Secretly Cultivate for a Thousand Years">
+           <img alt="Top Tier Providence, Secretly Cultivate for a Thousand Years" class="lazy" data-src="https://novelfire.net/server-1/top-tier-providence-secretly-cultivate-for-a-thousand-years.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/top-tier-providence-secretly-cultivate-for-a-thousand-years" title="Top Tier Providence, Secretly Cultivate for a Thousand Years">
+           Top Tier Providence, Secretly Cultivate for a Thousand Years
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2437">
+          </i>
+          <div class="scroll" id="categories_2437" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2437">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/lord-of-mysteries-2-circle-of-inevitability" title="Lord of Mysteries 2: Circle of Inevitability">
+           <img alt="Lord of Mysteries 2: Circle of Inevitability" class="lazy" data-src="https://novelfire.net/server-1/lord-of-mysteries-2-circle-of-inevitability.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/lord-of-mysteries-2-circle-of-inevitability" title="Lord of Mysteries 2: Circle of Inevitability">
+           Lord of Mysteries 2: Circle of Inevitability
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3465">
+          </i>
+          <div class="scroll" id="categories_3465" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3465">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/renegade-immortal" title="Renegade Immortal">
+           <img alt="Renegade Immortal" class="lazy" data-src="https://novelfire.net/server-1/renegade-immortal.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/renegade-immortal" title="Renegade Immortal">
+           Renegade Immortal
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_254">
+          </i>
+          <div class="scroll" id="categories_254" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Tragedy
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_254">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/outside-of-time" title="Outside Of Time">
+           <img alt="Outside Of Time" class="lazy" data-src="https://novelfire.net/server-1/outside-of-time.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/outside-of-time" title="Outside Of Time">
+           Outside Of Time
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2827">
+          </i>
+          <div class="scroll" id="categories_2827" scrollpanel="">
+           <span>
+            Eastern
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2827">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/supreme-harem-god-system" title="Supreme Harem God System">
+           <img alt="Supreme Harem God System" class="lazy" data-src="https://novelfire.net/server-1/supreme-harem-god-system.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/supreme-harem-god-system" title="Supreme Harem God System">
+           Supreme Harem God System
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2652">
+          </i>
+          <div class="scroll" id="categories_2652" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2652">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-mech-touch" title="The Mech Touch">
+           <img alt="The Mech Touch" class="lazy" data-src="https://novelfire.net/server-1/the-mech-touch.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-mech-touch" title="The Mech Touch">
+           The Mech Touch
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2687">
+          </i>
+          <div class="scroll" id="categories_2687" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Sci-fi
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2687">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-novels-extra" title="The Novel's Extra">
+           <img alt="The Novel's Extra" class="lazy" data-src="https://novelfire.net/server-1/the-novels-extra.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-novels-extra" title="The Novel's Extra">
+           The Novel's Extra
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3914">
+          </i>
+          <div class="scroll" id="categories_3914" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            School Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3914">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/re-awakening-i-became-a-pay-to-win-boss-monster" title="Re-Awakening: I Became a Pay To Win Boss Monster">
+           <img alt="Re-Awakening: I Became a Pay To Win Boss Monster" class="lazy" data-src="https://novelfire.net/server-1/re-awakening-i-became-a-pay-to-win-boss-monster.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/re-awakening-i-became-a-pay-to-win-boss-monster" title="Re-Awakening: I Became a Pay To Win Boss Monster">
+           Re-Awakening: I Became a Pay To Win Boss Monster
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9918">
+          </i>
+          <div class="scroll" id="categories_9918" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9918">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/paragon-of-sin" title="Paragon Of Sin">
+           <img alt="Paragon Of Sin" class="lazy" data-src="https://novelfire.net/server-1/paragon-of-sin.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/paragon-of-sin" title="Paragon Of Sin">
+           Paragon Of Sin
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2394">
+          </i>
+          <div class="scroll" id="categories_2394" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2394">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/diary-of-a-dead-wizard" title="Diary of a Dead Wizard">
+           <img alt="Diary of a Dead Wizard" class="lazy" data-src="https://novelfire.net/server-1/diary-of-a-dead-wizard.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/diary-of-a-dead-wizard" title="Diary of a Dead Wizard">
+           Diary of a Dead Wizard
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9996">
+          </i>
+          <div class="scroll" id="categories_9996" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adult
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Horror
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9996">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/why-should-i-stop-being-a-villain" title="Why Should I Stop Being a Villain">
+           <img alt="Why Should I Stop Being a Villain" class="lazy" data-src="https://novelfire.net/server-1/why-should-i-stop-being-a-villain.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/why-should-i-stop-being-a-villain" title="Why Should I Stop Being a Villain">
+           Why Should I Stop Being a Villain
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3378">
+          </i>
+          <div class="scroll" id="categories_3378" scrollpanel="">
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3378">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-mirror-legacy" title="The Mirror Legacy">
+           <img alt="The Mirror Legacy" class="lazy" data-src="https://novelfire.net/server-1/the-mirror-legacy.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-mirror-legacy" title="The Mirror Legacy">
+           The Mirror Legacy
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6848">
+          </i>
+          <div class="scroll" id="categories_6848" scrollpanel="">
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Tragedy
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6848">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/reincarnation-of-the-strongest-sword-god" title="Reincarnation Of The Strongest Sword God">
+           <img alt="Reincarnation Of The Strongest Sword God" class="lazy" data-src="https://novelfire.net/server-1/reincarnation-of-the-strongest-sword-god.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/reincarnation-of-the-strongest-sword-god" title="Reincarnation Of The Strongest Sword God">
+           Reincarnation Of The Strongest Sword God
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2068">
+          </i>
+          <div class="scroll" id="categories_2068" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Xianxia
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2068">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/ending-maker" title="Ending Maker">
+           <img alt="Ending Maker" class="lazy" data-src="https://novelfire.net/server-1/ending-maker.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/ending-maker" title="Ending Maker">
+           Ending Maker
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1782">
+          </i>
+          <div class="scroll" id="categories_1782" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1782">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/i-was-mistaken-as-a-monstrous-genius-actor" title="I Was Mistaken as a Monstrous Genius Actor">
+           <img alt="I Was Mistaken as a Monstrous Genius Actor" class="lazy" data-src="https://novelfire.net/server-1/i-was-mistaken-as-a-monstrous-genius-actor.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/i-was-mistaken-as-a-monstrous-genius-actor" title="I Was Mistaken as a Monstrous Genius Actor">
+           I Was Mistaken as a Monstrous Genius Actor
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5239">
+          </i>
+          <div class="scroll" id="categories_5239" scrollpanel="">
+           <span>
+            Comedy
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Slice of Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5239">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/a-villains-way-of-taming-heroines" title="A Villain's Way of Taming Heroines">
+           <img alt="A Villain's Way of Taming Heroines" class="lazy" data-src="https://novelfire.net/server-1/a-villains-way-of-taming-heroines.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/a-villains-way-of-taming-heroines" title="A Villain's Way of Taming Heroines">
+           A Villain's Way of Taming Heroines
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5181">
+          </i>
+          <div class="scroll" id="categories_5181" scrollpanel="">
+           <span>
+            Adult
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5181">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/hunter-academy-revenge-of-the-weakest" title="Hunter Academy: Revenge of the Weakest">
+           <img alt="Hunter Academy: Revenge of the Weakest" class="lazy" data-src="https://novelfire.net/server-1/hunter-academy-revenge-of-the-weakest.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/hunter-academy-revenge-of-the-weakest" title="Hunter Academy: Revenge of the Weakest">
+           Hunter Academy: Revenge of the Weakest
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5057">
+          </i>
+          <div class="scroll" id="categories_5057" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adult
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5057">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/necromancer-of-the-shadows" title="Necromancer Of The Shadows">
+           <img alt="Necromancer Of The Shadows" class="lazy" data-src="https://novelfire.net/server-1/necromancer-of-the-shadows.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/necromancer-of-the-shadows" title="Necromancer Of The Shadows">
+           Necromancer Of The Shadows
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3817">
+          </i>
+          <div class="scroll" id="categories_3817" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3817">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/simulating-endless-possibilities-invincible-once-i-act" title="Simulating Endless Possibilities: Invincible Once I Act">
+           <img alt="Simulating Endless Possibilities: Invincible Once I Act" class="lazy" data-src="https://novelfire.net/server-1/simulating-endless-possibilities-invincible-once-i-act.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/simulating-endless-possibilities-invincible-once-i-act" title="Simulating Endless Possibilities: Invincible Once I Act">
+           Simulating Endless Possibilities: Invincible Once I Act
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7670">
+          </i>
+          <div class="scroll" id="categories_7670" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Xianxia
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7670">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/supremacy-games" title="Supremacy Games">
+           <img alt="Supremacy Games" class="lazy" data-src="https://novelfire.net/server-1/supremacy-games.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/supremacy-games" title="Supremacy Games">
+           Supremacy Games
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2383">
+          </i>
+          <div class="scroll" id="categories_2383" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Reincarnation
+           </span>
+           <span>
+            Sci-fi
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2383">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/starting-with-an-sss-rank-swordsmanship-talent" title="Starting With an SSS-Rank Swordsmanship Talent">
+           <img alt="Starting With an SSS-Rank Swordsmanship Talent" class="lazy" data-src="https://novelfire.net/server-1/starting-with-an-sss-rank-swordsmanship-talent.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/starting-with-an-sss-rank-swordsmanship-talent" title="Starting With an SSS-Rank Swordsmanship Talent">
+           Starting With an SSS-Rank Swordsmanship Talent
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9204">
+          </i>
+          <div class="scroll" id="categories_9204" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9204">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/journey-of-the-fate-destroying-emperor" title="Journey of the Fate Destroying Emperor">
+           <img alt="Journey of the Fate Destroying Emperor" class="lazy" data-src="https://novelfire.net/server-1/journey-of-the-fate-destroying-emperor.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/journey-of-the-fate-destroying-emperor" title="Journey of the Fate Destroying Emperor">
+           Journey of the Fate Destroying Emperor
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2549">
+          </i>
+          <div class="scroll" id="categories_2549" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2549">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/my-vampire-system" title="My Vampire System">
+           <img alt="My Vampire System" class="lazy" data-src="https://novelfire.net/server-1/my-vampire-system.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/my-vampire-system" title="My Vampire System">
+           My Vampire System
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2219">
+          </i>
+          <div class="scroll" id="categories_2219" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Xianxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2219">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/infinite-mana-in-the-apocalypse" title="Infinite Mana In The Apocalypse">
+           <img alt="Infinite Mana In The Apocalypse" class="lazy" data-src="https://novelfire.net/server-1/infinite-mana-in-the-apocalypse.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/infinite-mana-in-the-apocalypse" title="Infinite Mana In The Apocalypse">
+           Infinite Mana In The Apocalypse
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2001">
+          </i>
+          <div class="scroll" id="categories_2001" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Game
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2001">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/i-fabricated-the-techniques-but-my-disciple-really-mastered-them" title="I Fabricated the Techniques, but my disciple really mastered them?">
+           <img alt="I Fabricated the Techniques, but my disciple really mastered them?" class="lazy" data-src="https://novelfire.net/server-1/i-fabricated-the-techniques-but-my-disciple-really-mastered-them.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/i-fabricated-the-techniques-but-my-disciple-really-mastered-them" title="I Fabricated the Techniques, but my disciple really mastered them?">
+           I Fabricated the Techniques, but my disciple really mastered them?
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5327">
+          </i>
+          <div class="scroll" id="categories_5327" scrollpanel="">
+           <span>
+            Eastern
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5327">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/kidnapped-dragons-kr-web-novel" title="Kidnapped Dragons (KR Web Novel)">
+           <img alt="Kidnapped Dragons (KR Web Novel)" class="lazy" data-src="https://novelfire.net/server-1/kidnapped-dragons-kr-web-novel.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/kidnapped-dragons-kr-web-novel" title="Kidnapped Dragons (KR Web Novel)">
+           Kidnapped Dragons (KR Web Novel)
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4598">
+          </i>
+          <div class="scroll" id="categories_4598" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Seinen
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4598">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-extras-rise" title="The Extra's Rise">
+           <img alt="The Extra's Rise" class="lazy" data-src="https://novelfire.net/server-1/the-extras-rise.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-extras-rise" title="The Extra's Rise">
+           The Extra's Rise
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9527">
+          </i>
+          <div class="scroll" id="categories_9527" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9527">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/i-was-mistaken-as-a-great-war-commander" title="I Was Mistaken as a Great War Commander">
+           <img alt="I Was Mistaken as a Great War Commander" class="lazy" data-src="https://novelfire.net/server-1/i-was-mistaken-as-a-great-war-commander.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/i-was-mistaken-as-a-great-war-commander" title="I Was Mistaken as a Great War Commander">
+           I Was Mistaken as a Great War Commander
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_8938">
+          </i>
+          <div class="scroll" id="categories_8938" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_8938">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/im-really-not-the-demon-gods-lackey" title="I'm Really Not The Demon God's Lackey">
+           <img alt="I'm Really Not The Demon God's Lackey" class="lazy" data-src="https://novelfire.net/server-1/im-really-not-the-demon-gods-lackey.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/im-really-not-the-demon-gods-lackey" title="I'm Really Not The Demon God's Lackey">
+           I'm Really Not The Demon God's Lackey
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2337">
+          </i>
+          <div class="scroll" id="categories_2337" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2337">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/naruto-the-wind-calamity" title="Naruto: The Wind Calamity">
+           <img alt="Naruto: The Wind Calamity" class="lazy" data-src="https://novelfire.net/server-1/naruto-the-wind-calamity.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/naruto-the-wind-calamity" title="Naruto: The Wind Calamity">
+           Naruto: The Wind Calamity
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5238">
+          </i>
+          <div class="scroll" id="categories_5238" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Slice of Life
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5238">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/one-planet-for-everyone-building-science-and-technology-civilization-at-the-beginning" title="One Planet for Everyone! Building Science and Technology Civilization at the Beginning">
+           <img alt="One Planet for Everyone! Building Science and Technology Civilization at the Beginning" class="lazy" data-src="https://novelfire.net/server-1/one-planet-for-everyone-building-science-and-technology-civilization-at-the-beginning.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/one-planet-for-everyone-building-science-and-technology-civilization-at-the-beginning" title="One Planet for Everyone! Building Science and Technology Civilization at the Beginning">
+           One Planet for Everyone! Building Science and Technology Civilization at the Beginning
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4979">
+          </i>
+          <div class="scroll" id="categories_4979" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Sci-fi
+           </span>
+           <span>
+            Supernatural
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4979">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/ive-become-the-king-of-villains-in-the-game" title="I've Become the King of Villains in the Game">
+           <img alt="I've Become the King of Villains in the Game" class="lazy" data-src="https://novelfire.net/server-1/ive-become-the-king-of-villains-in-the-game.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/ive-become-the-king-of-villains-in-the-game" title="I've Become the King of Villains in the Game">
+           I've Become the King of Villains in the Game
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_8707">
+          </i>
+          <div class="scroll" id="categories_8707" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_8707">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/simulation-towards-immortality-in-a-group-chat" title="Simulation Towards Immortality In A Group Chat">
+           <img alt="Simulation Towards Immortality In A Group Chat" class="lazy" data-src="https://novelfire.net/server-1/simulation-towards-immortality-in-a-group-chat.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/simulation-towards-immortality-in-a-group-chat" title="Simulation Towards Immortality In A Group Chat">
+           Simulation Towards Immortality In A Group Chat
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5117">
+          </i>
+          <div class="scroll" id="categories_5117" scrollpanel="">
+           <span>
+            Eastern
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5117">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/my-descendant-begged-me-to-help-him-just-after-i-became-a-god" title="My Descendant Begged Me To Help Him Just After I Became A God">
+           <img alt="My Descendant Begged Me To Help Him Just After I Became A God" class="lazy" data-src="https://novelfire.net/server-1/my-descendant-begged-me-to-help-him-just-after-i-became-a-god.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/my-descendant-begged-me-to-help-him-just-after-i-became-a-god" title="My Descendant Begged Me To Help Him Just After I Became A God">
+           My Descendant Begged Me To Help Him Just After I Became A God
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4075">
+          </i>
+          <div class="scroll" id="categories_4075" scrollpanel="">
+           <span>
+            Eastern
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4075">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/nine-star-hegemon-body-arts" title="Nine Star Hegemon Body Arts">
+           <img alt="Nine Star Hegemon Body Arts" class="lazy" data-src="https://novelfire.net/server-1/nine-star-hegemon-body-arts.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/nine-star-hegemon-body-arts" title="Nine Star Hegemon Body Arts">
+           Nine Star Hegemon Body Arts
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1041">
+          </i>
+          <div class="scroll" id="categories_1041" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Tragedy
+           </span>
+           <span>
+            Xuanhuan
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1041">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/childhood-friend-of-the-zenith" title="Childhood Friend of the Zenith">
+           <img alt="Childhood Friend of the Zenith" class="lazy" data-src="https://novelfire.net/server-1/childhood-friend-of-the-zenith.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/childhood-friend-of-the-zenith" title="Childhood Friend of the Zenith">
+           Childhood Friend of the Zenith
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3805">
+          </i>
+          <div class="scroll" id="categories_3805" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Wuxia
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3805">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/magic-academys-bastard-instructor" title="Magic Academy's Bastard Instructor">
+           <img alt="Magic Academy's Bastard Instructor" class="lazy" data-src="https://novelfire.net/server-1/magic-academys-bastard-instructor.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/magic-academys-bastard-instructor" title="Magic Academy's Bastard Instructor">
+           Magic Academy's Bastard Instructor
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9550">
+          </i>
+          <div class="scroll" id="categories_9550" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9550">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/global-game-afk-in-the-zombie-apocalypse-game" title="Global Game: AFK In The Zombie Apocalypse Game">
+           <img alt="Global Game: AFK In The Zombie Apocalypse Game" class="lazy" data-src="https://novelfire.net/server-1/global-game-afk-in-the-zombie-apocalypse-game.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/global-game-afk-in-the-zombie-apocalypse-game" title="Global Game: AFK In The Zombie Apocalypse Game">
+           Global Game: AFK In The Zombie Apocalypse Game
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2559">
+          </i>
+          <div class="scroll" id="categories_2559" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Game
+           </span>
+           <span>
+            Mystery
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2559">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/from-secret-clan-to-the-divine-dynasty" title="From Secret Clan to the Divine Dynasty">
+           <img alt="From Secret Clan to the Divine Dynasty" class="lazy" data-src="https://novelfire.net/server-1/from-secret-clan-to-the-divine-dynasty.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/from-secret-clan-to-the-divine-dynasty" title="From Secret Clan to the Divine Dynasty">
+           From Secret Clan to the Divine Dynasty
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_7685">
+          </i>
+          <div class="scroll" id="categories_7685" scrollpanel="">
+           <span>
+            Comedy
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_7685">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/obtaining-10x-rewards-reincarnated-into-a-novel-as-a-side-character" title="Obtaining 10x rewards! Reincarnated into a novel as a side-character!">
+           <img alt="Obtaining 10x rewards! Reincarnated into a novel as a side-character!" class="lazy" data-src="https://novelfire.net/server-1/obtaining-10x-rewards-reincarnated-into-a-novel-as-a-side-character.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/obtaining-10x-rewards-reincarnated-into-a-novel-as-a-side-character" title="Obtaining 10x rewards! Reincarnated into a novel as a side-character!">
+           Obtaining 10x rewards! Reincarnated into a novel as a side-character!
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6877">
+          </i>
+          <div class="scroll" id="categories_6877" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adult
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Reincarnation
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6877">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/i-am-the-games-villain" title="I Am The Game's Villain">
+           <img alt="I Am The Game's Villain" class="lazy" data-src="https://novelfire.net/server-1/i-am-the-games-villain.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/i-am-the-games-villain" title="I Am The Game's Villain">
+           I Am The Game's Villain
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3450">
+          </i>
+          <div class="scroll" id="categories_3450" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Reincarnation
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3450">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/an-extras-pov" title="An Extra's POV">
+           <img alt="An Extra's POV" class="lazy" data-src="https://novelfire.net/server-1/an-extras-pov.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/an-extras-pov" title="An Extra's POV">
+           An Extra's POV
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5432">
+          </i>
+          <div class="scroll" id="categories_5432" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Romance
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5432">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-primordial-record" title="The Primordial Record">
+           <img alt="The Primordial Record" class="lazy" data-src="https://novelfire.net/server-1/the-primordial-record.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-primordial-record" title="The Primordial Record">
+           The Primordial Record
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5056">
+          </i>
+          <div class="scroll" id="categories_5056" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5056">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/overgeared" title="Overgeared">
+           <img alt="Overgeared" class="lazy" data-src="https://novelfire.net/server-1/overgeared.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/overgeared" title="Overgeared">
+           Overgeared
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_1076">
+          </i>
+          <div class="scroll" id="categories_1076" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Sci-fi
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_1076">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-second-coming-of-gluttony" title="The Second Coming of Gluttony">
+           <img alt="The Second Coming of Gluttony" class="lazy" data-src="https://novelfire.net/server-1/the-second-coming-of-gluttony.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-second-coming-of-gluttony" title="The Second Coming of Gluttony">
+           The Second Coming of Gluttony
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_197">
+          </i>
+          <div class="scroll" id="categories_197" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Mature
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Seinen
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_197">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/nanomancer-reborn-ive-become-a-snow-girl" title="Nanomancer Reborn - I've Become A Snow Girl?">
+           <img alt="Nanomancer Reborn - I've Become A Snow Girl?" class="lazy" data-src="https://novelfire.net/server-1/nanomancer-reborn-ive-become-a-snow-girl.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/nanomancer-reborn-ive-become-a-snow-girl" title="Nanomancer Reborn - I've Become A Snow Girl?">
+           Nanomancer Reborn - I've Become A Snow Girl?
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_547">
+          </i>
+          <div class="scroll" id="categories_547" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Sci-fi
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_547">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/reincarnated-with-the-mind-control-powers-in-another-world" title="Reincarnated with the Mind Control Powers in Another World.">
+           <img alt="Reincarnated with the Mind Control Powers in Another World." class="lazy" data-src="https://novelfire.net/server-1/reincarnated-with-the-mind-control-powers-in-another-world.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/reincarnated-with-the-mind-control-powers-in-another-world" title="Reincarnated with the Mind Control Powers in Another World.">
+           Reincarnated with the Mind Control Powers in Another World.
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3554">
+          </i>
+          <div class="scroll" id="categories_3554" scrollpanel="">
+           <span>
+            Adult
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Ecchi
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Reincarnation
+           </span>
+           <span>
+            Smut
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3554">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/im-an-infinite-regressor-but-ive-got-stories-to-tell" title="I’m an Infinite Regressor, But I’ve Got Stories to Tell">
+           <img alt="I’m an Infinite Regressor, But I’ve Got Stories to Tell" class="lazy" data-src="https://novelfire.net/server-1/im-an-infinite-regressor-but-ive-got-stories-to-tell.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/im-an-infinite-regressor-but-ive-got-stories-to-tell" title="I’m an Infinite Regressor, But I’ve Got Stories to Tell">
+           I’m an Infinite Regressor, But I’ve Got Stories to Tell
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6865">
+          </i>
+          <div class="scroll" id="categories_6865" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Drama
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6865">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/genetic-ascension" title="Genetic Ascension">
+           <img alt="Genetic Ascension" class="lazy" data-src="https://novelfire.net/server-1/genetic-ascension.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/genetic-ascension" title="Genetic Ascension">
+           Genetic Ascension
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6884">
+          </i>
+          <div class="scroll" id="categories_6884" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6884">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-divine-hunter" title="The Divine Hunter">
+           <img alt="The Divine Hunter" class="lazy" data-src="https://novelfire.net/server-1/the-divine-hunter.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-divine-hunter" title="The Divine Hunter">
+           The Divine Hunter
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3840">
+          </i>
+          <div class="scroll" id="categories_3840" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Seinen
+           </span>
+           <span>
+            Shounen
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3840">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/villain-retirement" title="Villain Retirement">
+           <img alt="Villain Retirement" class="lazy" data-src="https://novelfire.net/server-1/villain-retirement.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/villain-retirement" title="Villain Retirement">
+           Villain Retirement
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2253">
+          </i>
+          <div class="scroll" id="categories_2253" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2253">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/pretending-to-be-an-untouchable-crime-boss" title="Pretending to Be an Untouchable Crime Boss">
+           <img alt="Pretending to Be an Untouchable Crime Boss" class="lazy" data-src="https://novelfire.net/server-1/pretending-to-be-an-untouchable-crime-boss.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/pretending-to-be-an-untouchable-crime-boss" title="Pretending to Be an Untouchable Crime Boss">
+           Pretending to Be an Untouchable Crime Boss
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_9708">
+          </i>
+          <div class="scroll" id="categories_9708" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Mystery
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            Slice of Life
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_9708">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/lightning-is-the-only-way" title="Lightning Is The Only Way">
+           <img alt="Lightning Is The Only Way" class="lazy" data-src="https://novelfire.net/server-1/lightning-is-the-only-way.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/lightning-is-the-only-way" title="Lightning Is The Only Way">
+           Lightning Is The Only Way
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_150">
+          </i>
+          <div class="scroll" id="categories_150" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_150">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-main-heroines-are-trying-to-kill-me" title="The Main Heroines are Trying to Kill Me">
+           <img alt="The Main Heroines are Trying to Kill Me" class="lazy" data-src="https://novelfire.net/server-1/the-main-heroines-are-trying-to-kill-me.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-main-heroines-are-trying-to-kill-me" title="The Main Heroines are Trying to Kill Me">
+           The Main Heroines are Trying to Kill Me
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3932">
+          </i>
+          <div class="scroll" id="categories_3932" scrollpanel="">
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Psychological
+           </span>
+           <span>
+            Romance
+           </span>
+           <span>
+            School Life
+           </span>
+           <span>
+            Tragedy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3932">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-reincarnated-assassin-is-a-genius-swordsman" title="The Reincarnated Assassin is a Genius Swordsman">
+           <img alt="The Reincarnated Assassin is a Genius Swordsman" class="lazy" data-src="https://novelfire.net/server-1/the-reincarnated-assassin-is-a-genius-swordsman.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-reincarnated-assassin-is-a-genius-swordsman" title="The Reincarnated Assassin is a Genius Swordsman">
+           The Reincarnated Assassin is a Genius Swordsman
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_3656">
+          </i>
+          <div class="scroll" id="categories_3656" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Martial Arts
+           </span>
+           <span>
+            Supernatural
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_3656">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/greatest-legacy-of-the-magus-universe" title="Greatest Legacy of the Magus Universe">
+           <img alt="Greatest Legacy of the Magus Universe" class="lazy" data-src="https://novelfire.net/server-1/greatest-legacy-of-the-magus-universe.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/greatest-legacy-of-the-magus-universe" title="Greatest Legacy of the Magus Universe">
+           Greatest Legacy of the Magus Universe
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6814">
+          </i>
+          <div class="scroll" id="categories_6814" scrollpanel="">
+           <span>
+            Fantasy
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6814">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/the-witch-hunter-system" title="The Witch Hunter System">
+           <img alt="The Witch Hunter System" class="lazy" data-src="https://novelfire.net/server-1/the-witch-hunter-system.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/the-witch-hunter-system" title="The Witch Hunter System">
+           The Witch Hunter System
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_2703">
+          </i>
+          <div class="scroll" id="categories_2703" scrollpanel="">
+           <span>
+            Adventure
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Mystery
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_2703">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/i-became-the-legendary-emperor-throughout-the-ages-after-i-started-giving-away-my-territory" title="I Became the Legendary Emperor Throughout the Ages After I Started Giving Away My Territory">
+           <img alt="I Became the Legendary Emperor Throughout the Ages After I Started Giving Away My Territory" class="lazy" data-src="https://novelfire.net/server-1/i-became-the-legendary-emperor-throughout-the-ages-after-i-started-giving-away-my-territory.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Completed
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/i-became-the-legendary-emperor-throughout-the-ages-after-i-started-giving-away-my-territory" title="I Became the Legendary Emperor Throughout the Ages After I Started Giving Away My Territory">
+           I Became the Legendary Emperor Throughout the Ages After I Started Giving Away My Territory
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_6376">
+          </i>
+          <div class="scroll" id="categories_6376" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Harem
+           </span>
+           <span>
+            Martial Arts
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_6376">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/superhunt" title="Superhunt">
+           <img alt="Superhunt" class="lazy" data-src="https://novelfire.net/server-1/superhunt.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/superhunt" title="Superhunt">
+           Superhunt
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_5195">
+          </i>
+          <div class="scroll" id="categories_5195" scrollpanel="">
+           <span>
+            Action
+           </span>
+           <span>
+            Adventure
+           </span>
+           <span>
+            Game
+           </span>
+           <span>
+            Mystery
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_5195">
+          </i>
+         </div>
+        </div>
+       </li>
+       <li class="novel-item">
+        <div class="cover-wrap">
+         <figure class="cover">
+          <a href="https://novelfire.net/book/from-thug-to-idol-transmigrating-to-a-survival-show" title="From Thug to Idol: Transmigrating to a Survival Show">
+           <img alt="From Thug to Idol: Transmigrating to a Survival Show" class="lazy" data-src="https://novelfire.net/server-1/from-thug-to-idol-transmigrating-to-a-survival-show.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+          </a>
+         </figure>
+        </div>
+        <div class="item-body">
+         <div class="status-group">
+          <span class="rank-counter">
+          </span>
+          <span class="status">
+           Ongoing
+          </span>
+         </div>
+         <h2 class="title text2row">
+          <a href="https://novelfire.net/book/from-thug-to-idol-transmigrating-to-a-survival-show" title="From Thug to Idol: Transmigrating to a Survival Show">
+           From Thug to Idol: Transmigrating to a Survival Show
+          </a>
+         </h2>
+         <div class="categories" data-dyscroll="1">
+          <i class="icon-left-open" data-scroll-act="left" data-scroll-id="categories_4794">
+          </i>
+          <div class="scroll" id="categories_4794" scrollpanel="">
+           <span>
+            Comedy
+           </span>
+           <span>
+            Fantasy
+           </span>
+           <span>
+            Reincarnation
+           </span>
+          </div>
+          <i class="icon-right-open" data-scroll-act="right" data-scroll-id="categories_4794">
+          </i>
+         </div>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </article>
+  </main>
+  <footer>
+   <div class="wrapper skiptranslate">
+    <div class="w-100">
+     <div class="col-ft-1">
+      <div class="logo text-center">
+       <a href="https://novelfire.net/home" style="display:inline-block" title="Novel Fire - Read Web Novels Online Free">
+        <img alt="Novel Fire" class="lazy footer-logo" data-src="https://novelfire.net/logo.svg?v=5" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+       </a>
+      </div>
+     </div>
+     <div class="col-ft-4 mt-0 mt-lg-3 mb-3 mb-lg-0">
+      <div>
+       <p>
+        Novel Fire is created in hopes that every novel fan can get to read novel without paying a dime, this site is completely free of charge. To read novel online for free, all you need to do is to visit Novel Fire, search for the novel you want to watch, and enjoy reading it at no cost and with no risk.
+       </p>
+      </div>
+     </div>
+     <div class="col-ft-2 mb-3 mb-lg-0">
+      <h5>
+       Userful links
+      </h5>
+      <nav class="links">
+       <ul>
+        <li>
+         <a href="https://novelfire.net/ranking" title="Explore the Top Rated Novels">
+          Novel Ranking
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/genre-all/sort-new/status-all/all-novel" title="Explore The Recently Added Novels">
+          Latest Novels
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/latest-release-novels" title="Recently Added Novel Chapters">
+          Latest Chapters
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/genre-all/sort-popular/status-completed/all-novel" title="Completed Novels">
+          Completed Novels
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/all-tags/A" title="Explore All Novel Tags">
+          All Tags
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="col-ft-2 mb-3 mb-lg-0">
+      <h5>
+       Page
+      </h5>
+      <nav class="links">
+       <ul>
+        <li>
+         <a href="https://novelfire.net/page/privacy-policy" title="Privacy Policy">
+          Privacy Policy
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/page/terms-of-service" title="Terms of Service">
+          Terms of Service
+         </a>
+        </li>
+        <li>
+         <a href="https://novelfire.net/contact-us" title="Contact Us">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+    <div class="clearfix copyright py-2 w-100 text-center">
+     <p>
+      Made with ♥ for Novel Lovers
+     </p>
+     <p class="fs-14">
+      Disclaimer: This site Novel Fire does not store any files on its server. All contents are provided by non-affiliated third parties.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script crossorigin="anonymous" integrity="sha512-wT7uPE7tOP6w4o28u1DN775jYjHQApdBnib5Pho4RB0Pgd9y7eSkAV1BTqQydupYDB9GBhTcQQzyNMPMV3cAew==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://novelfire.net/frontend/js/appsettings.min.js?ver=1.1.71">
+  </script>
+  <script src="https://novelfire.net/frontend/js/app.min.js?ver=1.1.71">
+  </script>
+  <div class="ajax_waiting">
+  </div>
+  <a href="#" id="back-to-top">
+   <svg class="bi bi-arrow-up-short" fill="currentColor" height="1em" style="color: rgb(255, 255, 255);" viewbox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" fill-rule="evenodd">
+    </path>
+   </svg>
+  </a>
+  <svg id="__SVG_SPRITE_NODE__" style="position: absolute; width: 0; height: 0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <symbol id="i-times" viewbox="0 0 1024 1024">
+    <path d="M618.775 512l320.329-320.329c30.51-30.51 30.51-76.269 0-106.775s-76.269-30.51-106.775 0l-320.329 320.329-320.329-320.329c-30.51-30.51-76.269-30.51-106.775 0s-30.51 76.269 0 106.775l320.329 320.329-320.329 320.329c-30.51 30.51-30.51 76.269 0 106.775s76.269 30.51 106.775 0l320.329-320.329 320.329 320.329c30.51 30.51 76.269 30.51 106.775 0s30.51-76.269 0-106.775l-320.329-320.329z">
+    </path>
+   </symbol>
+   <symbol id="icon-pantool" viewbox="0 0 24 24">
+    <path d="M21.5 4c-.83 0-1.5.67-1.5 1.5v5c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-8c0-.83-.67-1.5-1.5-1.5S16 1.67 16 2.5v8c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-9c0-.83-.67-1.5-1.5-1.5S12 .67 12 1.5v8.99c0 .28-.22.5-.5.5s-.5-.22-.5-.5V4.5c0-.83-.67-1.5-1.5-1.5S8 3.67 8 4.5v11.41l-4.12-2.35c-.58-.33-1.3-.24-1.78.22-.6.58-.62 1.54-.03 2.13l6.78 6.89c.75.77 1.77 1.2 2.85 1.2H19c2.21 0 4-1.79 4-4V5.5c0-.83-.67-1.5-1.5-1.5z">
+    </path>
+   </symbol>
+  </svg>
+  <div class="popupContainer" id="modal" style="display:none">
+   <header class="popupHeader">
+    <span class="header_title">
+     Login
+    </span>
+    <span class="modal_close">
+     <svg>
+      <use xlink:href="#i-times">
+      </use>
+     </svg>
+    </span>
+   </header>
+   <section class="popupBody">
+    <div class="social_login">
+     <div class="notification">
+     </div>
+     <div>
+      <a class="social_box google" href="https://novelfire.net/auth/redirect/google">
+       <span class="icon">
+        <i class="i-googlePlus">
+        </i>
+       </span>
+       <span class="icon_title">
+        LOG IN WITH GOOGLE
+       </span>
+      </a>
+      <a class="social_box" href="javascript:void(0)" id="login_form">
+       <span class="icon">
+        <i class="i-mail">
+        </i>
+       </span>
+       <span class="icon_title">
+        LOG IN WITH EMAIL
+       </span>
+      </a>
+     </div>
+     <div class="centeredText">
+      Don't have an account?
+      <br/>
+      <a class="font-weight" href="javascript:void(0)" id="register_form">
+       Sign up with your email address.
+      </a>
+     </div>
+    </div>
+    <div class="user_login edit-form">
+     <form>
+      <label>
+       Email
+      </label>
+      <input type="email"/>
+      <div class="alert alert-email">
+      </div>
+      <label>
+       Password
+      </label>
+      <input type="password"/>
+      <div class="alert alert-password">
+      </div>
+      <div class="checkbox" style="display:flex">
+       <input id="remember" type="checkbox"/>
+       <label for="remember">
+        Remember Me
+       </label>
+       <label style="margin-left:auto">
+        <a class="forgot_password" href="javascript:void(0)" id="forgot_password">
+         Forgot Password?
+        </a>
+       </label>
+      </div>
+      <div class="action_btns">
+       <div class="one_half">
+        <a class="button btn-modal back_btn" href="javascript:void(0)">
+         <i class="icon-left-big">
+         </i>
+         Back
+        </a>
+       </div>
+       <div class="one_half last">
+        <a class="button btn-modal" href="javascript:void(0)" onclick="loginAjax()">
+         Login
+        </a>
+       </div>
+      </div>
+     </form>
+    </div>
+    <div class="user_register edit-form">
+     <form>
+      <label>
+       Email
+      </label>
+      <input type="email"/>
+      <div class="alert alert-email">
+      </div>
+      <label>
+       Username
+      </label>
+      <input type="text"/>
+      <div class="alert alert-name">
+      </div>
+      <label>
+       Password
+      </label>
+      <input type="password"/>
+      <div class="alert alert-password">
+      </div>
+      <label>
+       Confirm Password
+      </label>
+      <input name="confirm-password" type="password"/>
+      <div class="alert alert-confirm-password">
+      </div>
+      <div class="action_btns">
+       <div class="one_half">
+        <a class="button btn-modal back_btn" href="javascript:void(0)">
+         <i class="icon-left-big">
+         </i>
+         Back
+        </a>
+       </div>
+       <div class="one_half last">
+        <a class="button btn-modal" href="javascript:void(0)" onclick="registerAjax()">
+         Sign Up
+        </a>
+       </div>
+      </div>
+     </form>
+    </div>
+    <div class="user_forgot_password edit-form">
+     <form>
+      <div class="pb-2">
+       <p style="padding-bottom:10px">
+        Enter your email address that you used to register. We'll send you an email with a link to reset your password.
+       </p>
+       <p>
+        <i>
+         If you don’t see the email, check other places it might be, like your junk, spam, social, or other folders.
+        </i>
+       </p>
+      </div>
+      <input placeholder="Email" type="email"/>
+      <div class="alert alert-email">
+      </div>
+      <div class="action_btns">
+       <div class="one_half">
+        <a class="button btn-modal back_btn_from_forgot_password" href="javascript:void(0)">
+         <i class="icon-left-big">
+         </i>
+         Back
+        </a>
+       </div>
+       <div class="one_half last">
+        <a class="button btn-modal" href="javascript:void(0)" onclick="codePasswordResetAjax()">
+         Send
+        </a>
+       </div>
+      </div>
+     </form>
+    </div>
+    <div class="form_alert">
+     <form>
+      <div class="alert">
+      </div>
+     </form>
+    </div>
+   </section>
+  </div>
+  <script src="https://novelfire.net/frontend/js/modal.min.js?ver=1.1.71">
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9YW3E218EG">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-9YW3E218EG');
+  </script>
+ </body>
+</html>
+
+============== END HTML DUMP ==============
+get_ranked_list returned no novels. Exiting with error.
