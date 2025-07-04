@@ -1,11 +1,10 @@
 import os
 import logging
-import subprocess
-import sys
 import asyncio
 import json
 import shutil
-from telegram import Update, BotCommand, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
+import threading
+from telegram import Update, BotCommand, InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Message
 from telegram.helpers import escape_markdown
 from telegram.ext import (
     Application,
@@ -13,33 +12,47 @@ from telegram.ext import (
     MessageHandler,
     filters,
     ContextTypes,
-    ConversationHandler,
-    CallbackQueryHandler
+    CallbackQueryHandler,
 )
 from dotenv import load_dotenv
+from typing import cast
 
-# Load environment variables from .env file
+from GetNovel.manager import NovelManager
+from GetNovel.scraper import Scraper
+from GetNovel.models import Novel
+
+# --- Setup ---
 load_dotenv()
-
-# Enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 logger = logging.getLogger(__name__)
-
-# Get the bot token from environment variables
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 if not TOKEN:
     raise ValueError("No TELEGRAM_BOT_TOKEN found in environment variables")
 
-# Define states for conversation
-GET_URL, GET_START_CHAPTER, GET_END_CHAPTER = range(3)
+OWNER_ID = 123456789  # !!! REPLACE WITH YOUR TELEGRAM USER ID !!!
+
+# --- State Constants ---
+STATE_IDLE = 0
+STATE_AWAITING_URL = 1
+STATE_AWAITING_CHAPTERS = 2
+
+# --- State Management ---
+def get_state(context: ContextTypes.DEFAULT_TYPE) -> int:
+    if context.user_data:
+        return context.user_data.get('state', STATE_IDLE)
+    return STATE_IDLE
+
+def set_state(context: ContextTypes.DEFAULT_TYPE, state: int):
+    if context.user_data:
+        logger.info(f"Setting state to {state}")
+        context.user_data['state'] = state
 
 # --- Library Data Management ---
 USER_LIBRARIES_FILE = "user_libraries.json"
 
 def load_libraries():
-    """Loads the user libraries from the JSON file."""
     if not os.path.exists(USER_LIBRARIES_FILE):
         return {}
     try:
@@ -49,510 +62,359 @@ def load_libraries():
         return {}
 
 def save_libraries(libraries):
-    """Saves the user libraries to the JSON file."""
     with open(USER_LIBRARIES_FILE, 'w') as f:
         json.dump(libraries, f, indent=4)
 
-def add_to_library(user_id, novel_info):
-    """Adds a novel to a user's library, avoiding duplicates."""
+def add_to_library(user_id, novel_info: Novel):
     user_id = str(user_id)
     libraries = load_libraries()
-    
     if user_id not in libraries:
         libraries[user_id] = []
-
-    # Avoid adding duplicates
-    if not any(n['url'] == novel_info['url'] for n in libraries[user_id]):
+    if not any(n['url'] == novel_info.url for n in libraries[user_id]):
         libraries[user_id].append({
-            "title": novel_info['title'],
-            "url": novel_info['url'],
-            "author": novel_info.get('author', 'N/A')
+            "title": novel_info.title, "url": novel_info.url,
+            "author": novel_info.author, "cover_url": novel_info.cover_url
         })
         save_libraries(libraries)
         return True
     return False
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Sends a welcome message when the /start command is issued."""
-    await update.message.reply_text(
-        "Welcome to the Novel Scraper Bot!\n\n"
-        "Click the 'Menu' button or use /help to see the available commands."
-    )
+# --- Helper Functions ---
+def cleanup_browse_data(context: ContextTypes.DEFAULT_TYPE):
+    if context.user_data:
+        context.user_data.pop('browse_list', None)
+        context.user_data.pop('browse_index', None)
+    covers_dir = "ranking_covers"
+    if os.path.exists(covers_dir):
+        shutil.rmtree(covers_dir)
+        logger.info(f"Cleaned up {covers_dir} directory.")
 
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Sends a help message when the /help command is issued."""
-    await update.message.reply_text(
-        "Available Commands:\n"
-        "/browse - Browse a list of ranked novels.\n"
-        "/getnovel - Start an interactive process to download a novel.\n"
-        "/cancel - Cancel the current operation."
-    )
-
-async def getnovel_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Starts the /getnovel conversation and asks for the novel URL."""
-    await update.message.reply_text(
-        "Let's download a novel! First, please send me the URL of the novel's main page."
-    )
-    return GET_URL
-
-async def get_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Stores the URL, fetches novel info, and asks for the starting chapter."""
-    url = update.message.text
-    if not url or not url.startswith('http'):
-        await update.message.reply_text("That doesn't look like a valid URL. Please send a valid URL.")
-        return GET_URL
-    
-    context.user_data['url'] = url
-    
-    await update.message.reply_text("Fetching novel details, please wait...")
-    try:
-        command = [sys.executable, 'GetNovel/novel_scraper.py', '--url', url, '--info-only']
-        process = await asyncio.create_subprocess_exec(
-            *command,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
-        )
-        stdout_bytes, stderr_bytes = await process.communicate()
-
-        if process.returncode != 0:
-            stderr = stderr_bytes.decode().strip()
-            await update.message.reply_text(f"Could not fetch details for this URL. Error:\n`{stderr}`\nPlease try another URL, or /cancel.")
-            return GET_URL
-
-        novel_info = json.loads(stdout_bytes)
-        context.user_data['novel_info'] = novel_info
-
-        title = novel_info.get('title', 'N/A')
-        author = novel_info.get('author', 'N/A')
-        total_chapters = novel_info.get('total_chapters', 'N/A')
-        cover_url = novel_info.get('cover_url')
-
-        caption = (
-            f"**{title}**\n"
-            f"by {author}\n\n"
-            f"Total Chapters: {total_chapters}\n\n"
-            "Is this the correct novel?"
-        )
-        
-        # Store novel info for potential library add
-        context.user_data['current_novel_info'] = novel_info
-
-        keyboard = [[InlineKeyboardButton("📖 Add to Library", callback_data="library_add")]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-
-        if cover_url:
-            await update.message.reply_photo(photo=cover_url, caption=caption, parse_mode='Markdown', reply_markup=reply_markup)
-        else:
-            await update.message.reply_text(caption, parse_mode='Markdown', reply_markup=reply_markup)
-
-        await update.message.reply_text("What chapter should I start from? (Send a number, or 'all' to download everything)")
-        return GET_START_CHAPTER
-
-    except Exception as e:
-        logger.error(f"Failed to fetch novel info: {e}")
-        await update.message.reply_text("An unexpected error occurred while fetching novel details. Please try again.")
-        return GET_URL
-
-async def get_start_chapter(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Stores the start chapter and asks for the end chapter."""
-    text = update.message.text
-    if text.lower() == 'all':
-        context.user_data['start_chapter'] = None
-        context.user_data['end_chapter'] = None
-        await update.message.reply_text("Got it! I will download all chapters.")
-        asyncio.create_task(run_scraper_and_send(update, context))
-        return ConversationHandler.END
-
-    try:
-        start_chapter = int(text)
-        context.user_data['start_chapter'] = start_chapter
-        await update.message.reply_text(f"Starting from chapter {start_chapter}. What is the last chapter you want? (Send a number)")
-        return GET_END_CHAPTER
-    except ValueError:
-        await update.message.reply_text("That's not a valid number. Please send a chapter number.")
-        return GET_START_CHAPTER
-
-async def get_end_chapter(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Stores the end chapter and starts the scraping process."""
-    try:
-        end_chapter = int(update.message.text)
-        if end_chapter < context.user_data['start_chapter']:
-            await update.message.reply_text("The end chapter can't be smaller than the start chapter. Please enter a valid end chapter.")
-            return GET_END_CHAPTER
-            
-        context.user_data['end_chapter'] = end_chapter
-        await update.message.reply_text(f"Okay, I will download from chapter {context.user_data['start_chapter']} to {end_chapter}.")
-        asyncio.create_task(run_scraper_and_send(update, context))
-        return ConversationHandler.END
-    except ValueError:
-        await update.message.reply_text("That's not a valid number. Please send a chapter number.")
-        return GET_END_CHAPTER
-
-async def run_scraper_and_send(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """The core logic to run the scraper subprocess and handle updates."""
+async def run_manager_and_send(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if not context.user_data or not update.effective_chat: return
     url = context.user_data.get('url')
-    start_chapter = context.user_data.get('start_chapter')
-    end_chapter = context.user_data.get('end_chapter')
-
-    status_message = await update.message.reply_text("Request received. Starting the process...")
-
+    start = context.user_data.get('start_chapter')
+    end = context.user_data.get('end_chapter')
+    chat_id = update.effective_chat.id
+    if not isinstance(url, str) or not isinstance(start, int):
+        await context.bot.send_message(chat_id, "Error: Missing novel information. Please start over.")
+        return
+    status_message = await context.bot.send_message(chat_id, "Request received. Starting the process...")
     try:
-        command = [sys.executable, 'GetNovel/main.py', '--url', url]
-        if start_chapter is not None and end_chapter is not None:
-            command.extend(['--start', str(start_chapter), '--end', str(end_chapter)])
-
-        process = await asyncio.create_subprocess_exec(
-            *command,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
-        )
-
-        epub_path = None
-        last_update_text = ""
-
-        if process.stdout:
-            async for line in process.stdout:
-                decoded_line = line.decode().strip()
-                if not decoded_line:
-                    continue
-
-                if decoded_line.startswith("PROGRESS:"):
-                    progress_text = decoded_line.split(":", 1)[1].strip()
-                    if progress_text != last_update_text:
-                        try:
-                            await status_message.edit_text(f"Scraping in progress...\n\n{progress_text}")
-                            last_update_text = progress_text
-                        except Exception as e:
-                            if "Message is not modified" not in str(e):
-                                logger.warning(f"Could not edit message: {e}")
-                
-                elif decoded_line.startswith("EPUB_PATH:"):
-                    epub_path = decoded_line.split(":", 1)[1].strip()
-
-        stderr_bytes = await process.stderr.read() if process.stderr else b''
-        stderr = stderr_bytes.decode().strip()
-        if stderr:
-            logger.info(f"Script stderr:\n{stderr}")
-
-        await process.wait()
-
-        if process.returncode != 0:
-            await status_message.edit_text(f"An error occurred:\n`{stderr}`")
-            return
-
+        manager = NovelManager()
+        epub_path = await asyncio.to_thread(manager.process_novel, url, start, end)
         if epub_path and os.path.exists(epub_path):
             await status_message.edit_text("EPUB generated successfully! Uploading now...")
-            await context.bot.send_document(chat_id=update.effective_chat.id, document=open(epub_path, 'rb'))
-            try:
-                os.remove(epub_path)
-                logger.info(f"Cleaned up {epub_path}")
-            except Exception as e:
-                logger.error(f"Error during cleanup: {e}")
+            with open(epub_path, 'rb') as epub_file:
+                await context.bot.send_document(chat_id, document=epub_file)
+            novel_dir = os.path.dirname(epub_path)
+            if os.path.isdir(novel_dir):
+                shutil.rmtree(novel_dir)
+                logger.info(f"Cleaned up {novel_dir}")
         else:
-            await status_message.edit_text(f"Could not find the generated EPUB file. Details:\n`{stderr}`")
-
+            await status_message.edit_text("Could not find the generated EPUB file.")
     except Exception as e:
-        logger.error(f"A critical error occurred in run_scraper_and_send: {e}")
-        await update.message.reply_text(f"A critical error occurred: {e}")
+        logger.error(f"A critical error occurred: {e}", exc_info=True)
+        await status_message.edit_text(f"A critical error occurred: {e}")
 
-async def browse_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Asks the user for the ranking criteria."""
+# --- Command Handlers ---
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.message:
+        await update.message.reply_text("Welcome! Use /help to see commands.")
+    set_state(context, STATE_IDLE)
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.message:
+        await update.message.reply_text(
+            "Commands:\n/browse - Browse ranked novels\n/getnovel - Download a novel\n/my_library - View your library\n/cancel - Cancel operation\n/stop - Stop the bot (owner only)"
+        )
+    set_state(context, STATE_IDLE)
+
+async def cancel_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.message:
+        await update.message.reply_text("Operation cancelled.")
+    cleanup_browse_data(context)
+    set_state(context, STATE_IDLE)
+
+async def stop_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Stops the bot (owner only)."""
+    if update.effective_user and update.effective_user.id == OWNER_ID:
+        if update.message:
+            await update.message.reply_text("Shutting down...")
+        
+        # Use a thread to stop the application to avoid RuntimeError
+        threading.Thread(target=context.application.stop).start()
+    elif update.message:
+        await update.message.reply_text("You are not authorized to use this command.")
+
+async def getnovel_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    logger.info("Command /getnovel received.")
+    if update.message:
+        await update.message.reply_text("Please send me the URL of the novel's main page.")
+    set_state(context, STATE_AWAITING_URL)
+
+async def browse_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    logger.info("Command /browse received.")
     keyboard = [
-        [InlineKeyboardButton("🏆 Overall Ranking", callback_data="browse_sort:overall")],
+        [InlineKeyboardButton("🏆 Overall", callback_data="browse_sort:overall")],
         [InlineKeyboardButton("🔥 Most Read", callback_data="browse_sort:most-read")],
         [InlineKeyboardButton("⭐ By Reviews", callback_data="browse_sort:most-review")],
     ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text("How would you like to sort the novels?", reply_markup=reply_markup)
-
-async def browse_sort_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handles the selection of a sorting criteria and fetches the list."""
-    query = update.callback_query
-    await query.answer()
-
-    sort_type = query.data.split(":", 1)[1]
-    
-    placeholder_message = await query.edit_message_text(f"Fetching ranked list (sorted by {sort_type}), please wait...")
-
-    try:
-        command = [sys.executable, 'GetNovel/novel_scraper.py', '--browse', sort_type]
-        process = await asyncio.create_subprocess_exec(
-            *command,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
-        )
-        stdout_bytes, stderr_bytes = await process.communicate()
-
-        if process.returncode != 0:
-            stderr = stderr_bytes.decode().strip()
-            error_log_path = "scraper_error.log"
-            with open(error_log_path, "w") as f:
-                f.write(stderr)
-            
-            await placeholder_message.delete()
-            await query.message.reply_text(
-                "The scraper failed to fetch the ranked list. Please see the attached log for details."
-            )
-            await query.message.reply_document(document=open(error_log_path, 'rb'))
-            os.remove(error_log_path)
-            return
-
-        ranked_list = json.loads(stdout_bytes)
-        context.user_data['browse_list'] = ranked_list
-        context.user_data['browse_index'] = 0
-        
-        await send_browse_card(update, context, message_to_edit=placeholder_message)
-
-    except Exception as e:
-        logger.error(f"Failed to fetch ranked list: {e}")
-        await placeholder_message.edit_text("An unexpected error occurred while fetching the ranked list.")
-
-async def send_browse_card(update: Update, context: ContextTypes.DEFAULT_TYPE, query=None, message_to_edit=None) -> None:
-    """Sends or edits a message to display the current novel in the browse list."""
-    browse_list = context.user_data.get('browse_list', [])
-    index = context.user_data.get('browse_index', 0)
-
-    # Determine the message to edit. If called from a callback, it's query.message.
-    # If called from the start, it's the placeholder message we passed.
-    if query:
-        message_to_edit = query.message
-    
-    if not message_to_edit:
-        logger.error("send_browse_card called without a message to edit.")
-        return
-
-    if not browse_list:
-        await message_to_edit.edit_text("Could not fetch the ranked list. Please try again later.")
-        return
-
-    novel = browse_list[index]
-    title = novel.get('title', 'N/A')
-    author = novel.get('author', 'N/A')
-    # Use the local path now, not a URL
-    local_cover_path = novel.get('local_cover_path')
-    novel_url = novel.get('url')
-
-    # Escape any special characters in the title and author for Markdown
-    # Escape any special characters in the title and author for MarkdownV2
-    safe_title = escape_markdown(title, version=2)
-    safe_author = escape_markdown(author, version=2)
-    caption = f"*{safe_title}*\n_By {safe_author}_\n\nRank {index + 1} of {len(browse_list)}"
-
-    # --- Keyboard ---
-    nav_buttons = []
-    if index > 0:
-        nav_buttons.append(InlineKeyboardButton("◀️ Previous", callback_data=f"browse_prev:{index}"))
-    if index < len(browse_list) - 1:
-        nav_buttons.append(InlineKeyboardButton("Next ▶️", callback_data=f"browse_next:{index}"))
-    
-    keyboard = [
-        nav_buttons,
-        [
-            InlineKeyboardButton("✅ Select", callback_data=f"browse_select:{index}"),
-            InlineKeyboardButton("📖 Add to Library", callback_data=f"library_add_browse:{index}")
-        ]
-    ]
-    # Filter out empty lists of buttons
-    keyboard = [row for row in keyboard if row]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-
-    # Now, we use the local file path to send the photo
-    if local_cover_path and os.path.exists(local_cover_path):
-        try:
-            with open(local_cover_path, 'rb') as photo_file:
-                media = InputMediaPhoto(media=photo_file, caption=caption, parse_mode='MarkdownV2')
-                await message_to_edit.edit_media(media=media, reply_markup=reply_markup)
-        except Exception as e:
-            logger.error(f"Failed to send local photo {local_cover_path}: {e}. Falling back to text.")
-            # Fallback if sending the local photo fails for some reason
-            text_fallback = f"{caption}\n\n_(Cover image failed to load)_"
-            await message_to_edit.edit_text(text=text_fallback, reply_markup=reply_markup, parse_mode='MarkdownV2')
-    else:
-        # This is the case where the cover couldn't be downloaded by the scraper
-        logger.warning(f"No local cover found for '{title}'. Sending text-only card.")
-        text_fallback = f"{caption}\n\n_(Cover image not available)_"
-        await message_to_edit.edit_text(text=text_fallback, reply_markup=reply_markup, parse_mode='MarkdownV2')
-
-def cleanup_browse_data(context: ContextTypes.DEFAULT_TYPE):
-    """Removes browse list, index, and the covers directory."""
-    context.user_data.pop('browse_list', None)
-    context.user_data.pop('browse_index', None)
-    
-    covers_dir = "ranking_covers"
-    if os.path.exists(covers_dir):
-        try:
-            shutil.rmtree(covers_dir)
-            logger.info(f"Successfully cleaned up {covers_dir} directory.")
-        except Exception as e:
-            logger.error(f"Error cleaning up {covers_dir}: {e}")
-
-async def add_to_library_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handles the 'Add to Library' button tap."""
-    query = update.callback_query
-    await query.answer()
-    
-    user_id = query.from_user.id
-    
-    # Determine which novel to add
-    if query.data.startswith("library_add_browse:"):
-        index = int(query.data.split(":")[1])
-        novel_info = context.user_data.get('browse_list', [])[index]
-    else: # From /getnovel flow
-        novel_info = context.user_data.get('current_novel_info')
-
-    if not novel_info:
-        await query.edit_message_text("Sorry, I lost track of the novel. Please try again.")
-        return
-
-    if add_to_library(user_id, novel_info):
-        await query.message.reply_text(f"Added *{escape_markdown(novel_info['title'], version=2)}* to your library\.", parse_mode='MarkdownV2')
-    else:
-        await query.message.reply_text(f"_*_*{escape_markdown(novel_info['title'], version=2)}*_*_ is already in your library\.", parse_mode='MarkdownV2')
-
+    if update.message:
+        await update.message.reply_text("How would you like to sort the novels?", reply_markup=InlineKeyboardMarkup(keyboard))
 
 async def my_library_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Displays the user's personal library of saved novels."""
+    logger.info("Command /my_library received.")
+    message = update.message
+    if not message or not update.effective_user: return
     user_id = str(update.effective_user.id)
-    libraries = load_libraries()
-    user_library = libraries.get(user_id, [])
-
+    user_library = load_libraries().get(user_id, [])
     if not user_library:
-        await update.message.reply_text("Your library is empty. You can add novels using the 'Add to Library' button when browsing or getting a novel.")
+        await message.reply_text("Your library is empty.")
         return
-
     text = "Here are your saved novels:\n\n"
     keyboard = []
     for i, novel in enumerate(user_library):
-        safe_title = escape_markdown(novel['title'], version=2)
-        text += f"{i + 1}\. *{safe_title}*\n"
+        safe_title = escape_markdown(novel.get('title', 'Unknown'), version=2)
+        text += f"{i + 1}\\. *{safe_title}*\n"
         keyboard.append([
-            InlineKeyboardButton(f"⬇️ Download {i+1}", callback_data=f"lib_download:{i}"),
-            InlineKeyboardButton(f"❌ Remove {i+1}", callback_data=f"lib_remove:{i}")
+            InlineKeyboardButton("⬇️ Download", callback_data=f"lib_download:{i}"),
+            InlineKeyboardButton("❌ Remove", callback_data=f"lib_remove:{i}")
         ])
-    
+    await message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode='MarkdownV2')
+
+# --- Message & Callback Handlers ---
+async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    state = get_state(context)
+    if state == STATE_AWAITING_URL:
+        await handle_url(update, context)
+    elif state == STATE_AWAITING_CHAPTERS:
+        await handle_chapters(update, context)
+
+async def handle_url(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    logger.info("Handling URL...")
+    message = update.message
+    if not message or not message.text or not context.user_data: return
+    url = message.text
+    if not url.startswith('http'):
+        await message.reply_text("That doesn't look like a valid URL. Please try again.")
+        return
+    context.user_data['url'] = url
+    await message.reply_text("Fetching novel details, please wait...")
+    scraper = Scraper()
+    novel_info = await asyncio.to_thread(scraper.get_novel_info, url)
+    if not novel_info:
+        await message.reply_text("Could not fetch details for this URL. Please try another URL, or /cancel.")
+        return
+    context.user_data['current_novel_info'] = novel_info
+    safe_title = escape_markdown(novel_info.title, version=2)
+    safe_author = escape_markdown(novel_info.author or "Unknown", version=2)
+    caption = f"*{safe_title}*\nby {safe_author}\n\nTotal Chapters: {novel_info.total_chapters or 'N/A'}"
+    keyboard = [[InlineKeyboardButton("📖 Add to Library", callback_data="library_add_current")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text(text, reply_markup=reply_markup, parse_mode='MarkdownV2')
+    if novel_info.cover_url:
+        await message.reply_photo(photo=novel_info.cover_url, caption=caption, parse_mode='MarkdownV2', reply_markup=reply_markup)
+    else:
+        await message.reply_text(caption, parse_mode='MarkdownV2', reply_markup=reply_markup)
+    await message.reply_text("What chapters do you want? (e.g., '1-50', 'all', or a single number)")
+    set_state(context, STATE_AWAITING_CHAPTERS)
 
-async def library_action_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int | None:
-    """Handles actions from the library view (download or remove)."""
+async def handle_chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    logger.info("Handling chapter selection...")
+    message = update.message
+    if not message or not message.text or not context.user_data: return
+    text = message.text.lower()
+    try:
+        if text == 'all':
+            start_chapter, end_chapter = 1, None
+        elif '-' in text:
+            start_str, end_str = text.split('-', 1)
+            start_chapter, end_chapter = int(start_str), int(end_str)
+        else:
+            start_chapter = end_chapter = int(text)
+    except (ValueError, TypeError):
+        await message.reply_text("Invalid format. Please use 'all', a single number, or a range like '1-50'.")
+        return
+    context.user_data['start_chapter'] = start_chapter
+    context.user_data['end_chapter'] = end_chapter
+    chapter_range = f"{start_chapter}-{end_chapter or 'end'}"
+    await message.reply_text(f"Okay, I will download chapters: {chapter_range}.")
+    asyncio.create_task(run_manager_and_send(update, context))
+    set_state(context, STATE_IDLE)
+
+async def handle_callbacks(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
-    await query.answer()
-
-    action, payload = query.data.split(":", 1)
-    index = int(payload)
+    if not query or not query.data: return
     
+    action, *payload = query.data.split(':')
+    payload = payload[0] if payload else None
+    logger.info(f"Handling callback: action='{action}', payload='{payload}'")
+
+    if action == 'browse_sort':
+        await browse_sort_callback(query, context, payload)
+    elif action in ['browse_next', 'browse_prev']:
+        await browse_navigation_callback(query, context, action)
+    elif action == 'browse_select':
+        await browse_select_callback(update, query, context, payload)
+    elif action.startswith('library_add'):
+        await add_to_library_callback(query, context, action, payload)
+    elif action.startswith('lib_'):
+        await library_action_callback(update, query, context, action, payload)
+
+async def browse_sort_callback(query, context, sort_type):
+    await query.answer()
+    message = await query.edit_message_text(f"Fetching ranked list (sorted by {sort_type}), please wait...")
+    if not isinstance(message, Message): return
+    scraper = Scraper()
+    ranked_list = await asyncio.to_thread(scraper.get_ranked_list, sort_type)
+    if not ranked_list:
+        await message.edit_text("Failed to fetch the ranked list.")
+        return
+    context.user_data['browse_list'] = ranked_list
+    context.user_data['browse_index'] = 0
+    await send_browse_card(context, message_to_edit=message)
+
+async def send_browse_card(context, message_to_edit):
+    if not context.user_data: return
+    browse_list = context.user_data.get('browse_list', [])
+    index = context.user_data.get('browse_index', 0)
+    if not browse_list or not (0 <= index < len(browse_list)):
+        await message_to_edit.edit_text("Could not fetch the ranked list.")
+        return
+    novel = browse_list[index]
+    safe_title = escape_markdown(novel.title, version=2)
+    safe_author = escape_markdown(novel.author or "Unknown", version=2)
+    caption = f"*{safe_title}*\n_By {safe_author}_\n\nChapters: {novel.total_chapters or 'N/A'}\nRank {index + 1} of {len(browse_list)}"
+    nav_buttons = []
+    if index > 0: nav_buttons.append(InlineKeyboardButton("◀️ Prev", callback_data="browse_prev"))
+    if index < len(browse_list) - 1: nav_buttons.append(InlineKeyboardButton("Next ▶️", callback_data="browse_next"))
+    keyboard = [
+        nav_buttons,
+        [InlineKeyboardButton("✅ Select", callback_data=f"browse_select:{index}")],
+        [InlineKeyboardButton("📖 Add to Library", callback_data=f"library_add_browse:{index}")]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    try:
+        if novel.local_cover_path and os.path.exists(novel.local_cover_path):
+            with open(novel.local_cover_path, 'rb') as photo_file:
+                media = InputMediaPhoto(media=photo_file, caption=caption, parse_mode='MarkdownV2')
+                await message_to_edit.edit_media(media=media, reply_markup=reply_markup)
+        else:
+            raise ValueError("No local cover path")
+    except Exception:
+        await message_to_edit.edit_text(text=f"{caption}\n\n_\\(Cover image not available\\)_", reply_markup=reply_markup, parse_mode='MarkdownV2')
+
+async def browse_navigation_callback(query, context, action):
+    await query.answer()
+    if not context.user_data: return
+    index = context.user_data.get('browse_index', 0)
+    browse_list = context.user_data.get('browse_list', [])
+    if action == "browse_next": index += 1
+    elif action == "browse_prev": index -= 1
+    if 0 <= index < len(browse_list) and isinstance(query.message, Message):
+        context.user_data['browse_index'] = index
+        await send_browse_card(context, message_to_edit=query.message)
+
+async def browse_select_callback(update, query, context, payload):
+    await query.answer()
+    if not context.user_data or not payload: return
+    selected_index = int(payload)
+    browse_list = context.user_data.get('browse_list', [])
+    if 0 <= selected_index < len(browse_list):
+        novel = browse_list[selected_index]
+        context.user_data['url'] = novel.url
+        cleanup_browse_data(context)
+        await query.edit_message_reply_markup(reply_markup=None)
+        safe_title = novel.title
+        if isinstance(query.message, Message):
+            await query.message.reply_text(
+                f"Novel selected: {safe_title}\n\nWhat chapters do you want? (e.g., '1-50', 'all', or a single number)"
+            )
+        set_state(context, STATE_AWAITING_CHAPTERS)
+    else:
+        await query.edit_message_text("Sorry, there was an error selecting that novel.")
+
+async def add_to_library_callback(query, context, action, payload):
+    await query.answer()
+    if not context.user_data: return
+    user_id = query.from_user.id
+    novel_info = None
+    if action == "library_add_browse" and payload:
+        index = int(payload)
+        browse_list = context.user_data.get('browse_list', [])
+        if 0 <= index < len(browse_list):
+            novel_info = browse_list[index]
+    elif action == "library_add_current":
+        novel_info = context.user_data.get('current_novel_info')
+    if not isinstance(novel_info, Novel):
+        if isinstance(query.message, Message):
+            await query.message.reply_text("Sorry, I lost track of the novel.")
+        return
+    if add_to_library(user_id, novel_info):
+        if isinstance(query.message, Message):
+            await query.message.reply_text(f"Added *{escape_markdown(novel_info.title, version=2)}* to your library\\.", parse_mode='MarkdownV2')
+    else:
+        if isinstance(query.message, Message):
+            await query.message.reply_text(f"_*{escape_markdown(novel_info.title, version=2)}*_ is already in your library\\.", parse_mode='MarkdownV2')
+
+async def library_action_callback(update, query, context, action, payload):
+    await query.answer()
+    if not context.user_data or not payload: return
     user_id = str(query.from_user.id)
     libraries = load_libraries()
     user_library = libraries.get(user_id, [])
-
+    index = int(payload)
     if not (0 <= index < len(user_library)):
         await query.edit_message_text("Sorry, that novel is no longer in your library.")
-        return None
-
-    novel_info = user_library[index]
-
+        return
+    novel_data = user_library[index]
     if action == "lib_download":
-        # Transition to the getnovel flow, pre-filling the URL
-        context.user_data['url'] = novel_info['url']
-        await query.edit_message_text(f"Selected *{escape_markdown(novel_info['title'], version=2)}*\.", parse_mode='MarkdownV2')
-        await query.message.reply_text("What chapter should I start from? (Send a number, or 'all')")
-        return GET_START_CHAPTER
-    
+        context.user_data['url'] = novel_data.get('url')
+        safe_title = escape_markdown(novel_data.get('title', 'Unknown'), version=2)
+        await query.edit_message_text(f"Selected *{safe_title}*\\.", parse_mode='MarkdownV2')
+        if isinstance(query.message, Message):
+            await query.message.reply_text("What chapters do you want? (e.g., '1-50', 'all')")
+        set_state(context, STATE_AWAITING_CHAPTERS)
     elif action == "lib_remove":
-        removed_novel = libraries[user_id].pop(index)
+        user_library.pop(index)
         save_libraries(libraries)
-        await query.edit_message_text(f"Removed *{escape_markdown(removed_novel['title'], version=2)}* from your library\.", parse_mode='MarkdownV2')
-        # Refresh the library view
-        await my_library_command(query.message, context)
-        return None
-
-
-async def browse_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int | None:
-    """Handles all button taps for the browse menu (next, prev, select)."""
-    query = update.callback_query
-    await query.answer()
-
-    data = query.data
-    action, payload = data.split(":", 1)
-
-    current_index = context.user_data.get('browse_index', 0)
-
-    if action == "browse_next":
-        new_index = current_index + 1
-    elif action == "browse_prev":
-        new_index = current_index - 1
-    else: # This handles 'browse_select'
-        selected_index = int(payload)
-        browse_list = context.user_data.get('browse_list', [])
-        
-        if 0 <= selected_index < len(browse_list):
-            url = browse_list[selected_index].get('url')
-            context.user_data['url'] = url
-            
-            cleanup_browse_data(context)
-            
-            await query.edit_message_reply_markup(reply_markup=None)
-            await query.message.reply_text(
-                "Novel selected! What chapter should I start from? (Send a number, or 'all')"
-            )
-            return GET_START_CHAPTER
+        if not user_library:
+            await query.edit_message_text("Your library is now empty.")
         else:
-            await query.edit_message_text("Sorry, there was an error selecting that novel.")
-            return None
+            text = "Here are your saved novels:\n\n"
+            keyboard = []
+            for i, novel in enumerate(user_library):
+                safe_title = escape_markdown(novel.get('title', 'Unknown Title'), version=2)
+                text += f"{i + 1}\\. *{safe_title}*\n"
+                keyboard.append([
+                    InlineKeyboardButton("⬇️ Download", callback_data=f"lib_download:{i}"),
+                    InlineKeyboardButton("❌ Remove", callback_data=f"lib_remove:{i}")
+                ])
+            await query.edit_message_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode='MarkdownV2')
 
-    browse_list = context.user_data.get('browse_list', [])
-    if 0 <= new_index < len(browse_list):
-        context.user_data['browse_index'] = new_index
-        await send_browse_card(update, context, query=query)
-    
-    return None
-
-async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
-    """Cancels and ends the conversation, cleaning up any browse data."""
-    await update.message.reply_text("Operation cancelled.")
-    cleanup_browse_data(context)
-    return ConversationHandler.END
-
+# --- Bot Setup ---
 async def post_init(application: Application) -> None:
-    """Set the bot's command menu after initialization."""
     commands = [
         BotCommand("browse", "Browse ranked novels"),
         BotCommand("getnovel", "Download a novel by URL"),
         BotCommand("my_library", "View your saved novels"),
         BotCommand("help", "Show help message"),
         BotCommand("cancel", "Cancel the current operation"),
+        BotCommand("stop", "Stops the bot (owner only)"),
     ]
     await application.bot.set_my_commands(commands)
 
 def main() -> None:
-    """Start the bot."""
-    application = Application.builder().token(TOKEN).post_init(post_init).build()
-
-    conv_handler = ConversationHandler(
-        entry_points=[
-            CommandHandler("getnovel", getnovel_start),
-            CallbackQueryHandler(browse_callback, pattern=r'^browse_select:.*')
-        ],
-        states={
-            GET_URL: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_url)],
-            GET_START_CHAPTER: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_start_chapter)],
-            GET_END_CHAPTER: [MessageHandler(filters.TEXT & ~filters.COMMAND, get_end_chapter)],
-        },
-        fallbacks=[CommandHandler("cancel", cancel)],
-    )
-
-    application.add_handler(CommandHandler("start", start))
+    application = Application.builder().token(cast(str, TOKEN)).post_init(post_init).build()
+    application.add_handler(CommandHandler("start", start_command))
     application.add_handler(CommandHandler("help", help_command))
-    application.add_handler(CommandHandler("browse", browse_start))
-    # Handlers for the new browse flow
-    application.add_handler(CallbackQueryHandler(browse_sort_callback, pattern=r'^browse_sort:.*'))
-    application.add_handler(CallbackQueryHandler(browse_callback, pattern=r'^browse_(next|prev):.*'))
-    
-    # Handler for adding to library
-    application.add_handler(CallbackQueryHandler(add_to_library_callback, pattern=r'^library_add.*'))
-
-    application.add_handler(conv_handler)
-
+    application.add_handler(CommandHandler("cancel", cancel_command))
+    application.add_handler(CommandHandler("getnovel", getnovel_command))
+    application.add_handler(CommandHandler("browse", browse_command))
+    application.add_handler(CommandHandler("my_library", my_library_command))
+    application.add_handler(CommandHandler("stop", stop_command))
+    application.add_handler(CallbackQueryHandler(handle_callbacks))
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
+    logger.info("Bot is starting...")
     application.run_polling()
 
 if __name__ == "__main__":

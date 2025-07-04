@@ -3,3 +3,4 @@ requests
 beautifulsoup4
 EbookLib
 python-dotenv
+pytest
