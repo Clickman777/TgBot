@@ -106,10 +106,7 @@ async def run_manager_and_send(update: Update, context: ContextTypes.DEFAULT_TYP
             await status_message.edit_text("EPUB generated successfully! Uploading now...")
             with open(epub_path, 'rb') as epub_file:
                 await context.bot.send_document(chat_id, document=epub_file)
-            novel_dir = os.path.dirname(epub_path)
-            if os.path.isdir(novel_dir):
-                shutil.rmtree(novel_dir)
-                logger.info(f"Cleaned up {novel_dir}")
+            # The novel directory is preserved after sending the EPUB.
         else:
             await status_message.edit_text("Could not find the generated EPUB file.")
     except Exception as e:

@@ -19,7 +19,5 @@ class Novel:
     total_chapters: Optional[int] = None
     base_chapter_url: Optional[str] = None
     chapters: List[Chapter] = field(default_factory=list)
-    # Local path to the downloaded cover image
     local_cover_path: Optional[str] = None
-    # Local directory where novel files are stored
     novel_dir: Optional[str] = None

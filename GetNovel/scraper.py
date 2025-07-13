@@ -4,7 +4,7 @@ import re
 import os
 import shutil
 import concurrent.futures
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from .models import Novel
 
 class Scraper:
@@ -69,16 +69,18 @@ class Scraper:
             return None
 
     def download_cover_image(self, novel: Novel) -> Optional[str]:
-        """Downloads the cover image for a given novel and updates the novel object."""
+        """Downloads the cover image for a given novel into its specific directory."""
         if not novel.cover_url or not novel.novel_dir:
             return None
         
+        # Determine file extension from URL or default to .jpg
         file_extension = os.path.splitext(novel.cover_url)[1]
-        if file_extension not in ['.jpg', '.jpeg', '.png', '.webp']:
+        if file_extension.lower() not in ['.jpg', '.jpeg', '.png', '.webp']:
             file_extension = '.jpg'
             
         save_path = os.path.join(novel.novel_dir, f"cover{file_extension}")
 
+        # Skip download if the cover already exists
         if os.path.exists(save_path):
             novel.local_cover_path = save_path
             return save_path
@@ -86,25 +88,40 @@ class Scraper:
         try:
             response = requests.get(novel.cover_url, stream=True, timeout=10)
             response.raise_for_status()
+            
+            # Ensure the novel's directory exists
             os.makedirs(novel.novel_dir, exist_ok=True)
+            
             with open(save_path, 'wb') as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
+            
             novel.local_cover_path = save_path
+            print(f"Successfully downloaded cover to {save_path}")
             return save_path
         except requests.exceptions.RequestException as e:
-            print(f"Error downloading cover: {e}")
+            print(f"Error downloading cover for {novel.title}: {e}")
             return None
 
-    def get_chapter_content(self, chapter_url: str) -> Optional[str]:
-        """Fetches and parses the content of a single chapter."""
+    def get_chapter_content(self, chapter_url: str) -> Optional[Tuple[str, str]]:
+        """Fetches and parses the content and title of a single chapter."""
         try:
             response = requests.get(chapter_url, headers=self.headers, timeout=10)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
+
+            title = "Unknown Title"
+            title_element = soup.find('span', class_='chapter-title')
+            if isinstance(title_element, Tag):
+                raw_title = title_element.text.strip()
+                # Remove "Chapter X: " or similar prefixes, case-insensitively
+                title = re.sub(r'^\s*chapter\s*\d+\s*:?\s*', '', raw_title, flags=re.IGNORECASE).strip()
+
             content_div = soup.find('div', id='content')
             if isinstance(content_div, Tag):
-                return "".join([str(p) for p in content_div.find_all('p')])
+                content = "".join([str(p) for p in content_div.find_all('p')])
+                return title, content
+            
             return None
         except requests.exceptions.RequestException as e:
             print(f"Error fetching chapter {chapter_url}: {e}")
