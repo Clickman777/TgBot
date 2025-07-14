@@ -74,7 +74,8 @@ class Scraper:
                 total_chapters=total_chapters,
                 base_chapter_url=f"{url}/chapter-{{}}",
                 genres=genres,
-                description=description
+                description=description,
+                status="Ongoing" # Dummy status
             )
         except Exception as e:
             print(f"Failed to parse novel information from {url}: {e}")
@@ -144,7 +145,9 @@ class Scraper:
         sort_map = {
             'overall': self.base_url + '/ranking',
             'most-read': self.base_url + '/ranking/most-read',
-            'most-review': self.base_url + '/ranking/most-review'
+            'most-review': self.base_url + '/ranking/most-review',
+            'most-comment': self.base_url + '/ranking/most-comment', # Placeholder URL
+            'most-favored': self.base_url + '/ranking/most-lib'
         }
         url = sort_map.get(sort_type, sort_map['overall'])
 
@@ -220,7 +223,8 @@ class Scraper:
                 author='N/A',
                 url=novel_url,
                 cover_url=str(cover_url) if cover_url else None,
-                local_cover_path=local_cover_path
+                local_cover_path=local_cover_path,
+                status="Ongoing" # Dummy status for ranked list items
             ))
 
         # Fetch author details concurrently

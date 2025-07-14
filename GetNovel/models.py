@@ -11,15 +11,13 @@ class Chapter:
 
 @dataclass
 class Novel:
-    """Represents a novel, including its metadata and chapters."""
     title: str
-    author: str
     url: str
+    author: Optional[str] = None
+    cover_url: Optional[str] = None
     genres: List[str] = field(default_factory=list)
     description: Optional[str] = None
-    cover_url: Optional[str] = None
     total_chapters: Optional[int] = None
-    base_chapter_url: Optional[str] = None
-    chapters: List[Chapter] = field(default_factory=list)
     local_cover_path: Optional[str] = None
-    novel_dir: Optional[str] = None
+    status: Optional[str] = None
+    base_chapter_url: Optional[str] = None # Added base_chapter_url field
