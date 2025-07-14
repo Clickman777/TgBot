@@ -56,13 +56,25 @@ class Scraper:
                         if match:
                             total_chapters = int(match.group(1))
 
+            genres = []
+            genres_elements = soup.select('a.property-item[href*="/genre-"]')
+            if genres_elements:
+                genres = [genre.text.strip() for genre in genres_elements]
+
+            description = None
+            description_element = soup.select_one('div.summary div.content.expand-wrapper')
+            if isinstance(description_element, Tag):
+                description = "\n".join([p.text.strip() for p in description_element.find_all('p')])
+
             return Novel(
                 title=title,
                 author=author,
                 url=url,
                 cover_url=str(cover_url) if cover_url else None,
                 total_chapters=total_chapters,
-                base_chapter_url=f"{url}/chapter-{{}}"
+                base_chapter_url=f"{url}/chapter-{{}}",
+                genres=genres,
+                description=description
             )
         except Exception as e:
             print(f"Failed to parse novel information from {url}: {e}")
@@ -220,5 +232,7 @@ class Scraper:
                 if novel_data:
                     original_novel.author = novel_data.author
                     original_novel.total_chapters = novel_data.total_chapters
+                    original_novel.genres = novel_data.genres
+                    original_novel.description = novel_data.description
         
         return novel_list

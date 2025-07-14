@@ -15,6 +15,8 @@ class Novel:
     title: str
     author: str
     url: str
+    genres: List[str] = field(default_factory=list)
+    description: Optional[str] = None
     cover_url: Optional[str] = None
     total_chapters: Optional[int] = None
     base_chapter_url: Optional[str] = None
